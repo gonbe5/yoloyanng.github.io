@@ -409,21 +409,21 @@ height:50vh;
 <ul>
 <li>打开压缩包得到的是一张PNG格式的图片</li>
 </ul>
-<p><img src="/2018/09/27/几道图片隐写题/F:/hexo\image\1538017412117.png" alt="1538017412117"></p>
+<p><img src="https://i.loli.net/2018/09/27/5bac57670a4c5.png" alt="1538017412117"></p>
 <ul>
 <li>首先拖放到010Editor中：</li>
 </ul>
-<p><img src="/2018/09/27/几道图片隐写题/F:/hexo\image\1538017580794.png" alt="1538017580794"></p>
+<p><img src="https://i.loli.net/2018/09/27/5bac5767a95c3.png" alt="1538017580794"></p>
 <p>CTRL+F 搜索IHDR发现只有一个，没有其他问题</p>
 <ul>
 <li>然后放到KALI中分析一波：</li>
 </ul>
-<p><img src="/2018/09/27/几道图片隐写题/F:/hexo\image\1538017900333.png" alt="1538017900333"></p>
+<p><img src="https://i.loli.net/2018/09/27/5bac5768bd784.png" alt=""></p>
 <p>图片能够在kali中打开，说明不是宽高的隐写，因为如果修改了宽高在linux中是无法正常显示的</p>
 <ul>
 <li>然后binwalk分析一波：</li>
 </ul>
-<p><img src="/2018/09/27/几道图片隐写题/F:/hexo\image\1538017964210.png" alt="1538017964210"></p>
+<p><img src="https://i.loli.net/2018/09/27/5bac57681f66f.png" alt=""></p>
 <p>同样的没有什么问题</p>
 <ul>
 <li>最后就是放到 stegslove里面试一试了</li>
@@ -435,12 +435,12 @@ height:50vh;
 <p><img src="/2018/09/27/几道图片隐写题/F:/hexo\image\1538018077684.png" alt="1538018077684"></p>
 <p>发现Red plane 0是空的，按理来说应该也是”雪花“的，所以应该是有问题的</p>
 <p>然后 Analyse - Data Extract，查看该通道，得知是LSB隐写</p>
-<p><img src="/2018/09/27/几道图片隐写题/F:/hexo\image\1538018464331.png" alt="1538018464331"></p>
+<p><img src="https://i.loli.net/2018/09/27/5bac5769ef894.png" alt=""></p>
 <p>后面得知就是吧Alpha、Red、Green、Blue 0通道进行异或处理就能够得到flag了，可以通过stegslove获得，下面说一下通过python编写脚本进行色道分离异或处理的方法：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lowbit</span><span class="params">(x)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> x &amp; <span class="number">0x1</span></span><br><span class="line"></span><br><span class="line">png= cv2.imread(<span class="string">"flag_enc.png"</span> , cv2.IMREAD_UNCHANGED)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个temp文件夹保存异或之后的图片</span></span><br><span class="line">os.system(<span class="string">"mkdir temp"</span>)</span><br><span class="line"><span class="comment"># 打开进入temp文件夹</span></span><br><span class="line">os.system(<span class="string">"cd temp"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> f <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">        dst= cv2.bitwise_xor(lowbit(png[: ,: ,i]),lowbit(png[: ,:, f]))</span><br><span class="line"></span><br><span class="line">        cv2.imwrite(<span class="string">"temp/"</span>+<span class="string">"xor_"</span>+str(i)+<span class="string">"_"</span>+str(f)+<span class="string">".png"</span>,dst*<span class="number">255</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> f <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">        dst= cv2.bitwise_or(lowbit(png[: ,: ,i]),lowbit(png[: ,:, f]))</span><br><span class="line"></span><br><span class="line">        cv2.imwrite(<span class="string">"temp/"</span>+<span class="string">"or_"</span>+str(i)+<span class="string">"_"</span>+str(f)+<span class="string">".png"</span>,dst*<span class="number">255</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> f <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">        dst= cv2.bitwise_and(lowbit(png[: ,: ,i]),lowbit(png[: ,:, f]))</span><br><span class="line"></span><br><span class="line">        cv2.imwrite(<span class="string">"temp/"</span>+<span class="string">"and_"</span>+str(i)+<span class="string">"_"</span>+str(f)+<span class="string">".png"</span>,dst*<span class="number">255</span>)</span><br></pre></td></tr></table></figure>
 <p>然后就可以得到结果，很明显能够看到flag了：</p>
-<p><img src="/2018/09/27/几道图片隐写题/F:/hexo\image\1538018789864.png" alt="1538018789864"></p>
-<p><img src="/2018/09/27/几道图片隐写题/F:/hexo\image\1538018870610.png" alt="1538018870610"></p>
+<p><img src="https://i.loli.net/2018/09/27/5bac576b10d26.png" alt=""></p>
+<p><img src="https://i.loli.net/2018/09/27/5bac576a84317.png" alt=""></p>
 
     </article>
     <!-- license  -->
@@ -449,12 +449,17 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/09/27/Linux-文件解析/" title= "Linux--文件解析">
+                    <div class="nextTitle">Linux--文件解析</div>
+                </a>
+            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/09/27/Linux-文件解析/" title= "Linux--文件解析">
-                    <div class="prevTitle">Linux--文件解析</div>
+                <a href= "/2018/09/26/《伊萨卡岛》/" title= "《伊萨卡岛》">
+                    <div class="prevTitle">《伊萨卡岛》</div>
                 </a>
             
         </li>
@@ -613,6 +618,10 @@ top:50vh;
     
     
     
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 4
@@ -631,12 +640,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2018/09/27/Linux-文件解析/" >Linux--文件解析</a>
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2018/09/27/几道图片隐写题/" >几道图片隐写题</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2018/09/27/几道图片隐写题/" >几道图片隐写题</a>
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2018/09/27/Linux-文件解析/" >Linux--文件解析</a>
         </li>
     
     
@@ -654,11 +663,11 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="CTF"><span class="iconfont-archer">&#xe606;</span>CTF</span>
-    
         <span class="sidebar-tag-name" data-tags="杂文"><span class="iconfont-archer">&#xe606;</span>杂文</span>
     
         <span class="sidebar-tag-name" data-tags="Linux"><span class="iconfont-archer">&#xe606;</span>Linux</span>
+    
+        <span class="sidebar-tag-name" data-tags="CTF"><span class="iconfont-archer">&#xe606;</span>CTF</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
