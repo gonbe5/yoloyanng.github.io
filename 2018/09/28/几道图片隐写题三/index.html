@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Ithaca&#39;s Tavern.</title>
+    <title>几道图片隐写题三 · Ithaca&#39;s Tavern.</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Ithaca&#39;s Tavern.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">几道图片隐写题三</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Ithaca's Tavern.</a>
 </header>
@@ -220,24 +231,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            几道图片隐写题三
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "CTF">CTF</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">420</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/09/28</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,314 +399,84 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/28/几道图片隐写题三/" >
-            
-                <span>几道图片隐写题三</span>
-        </a>
-        <div class="abstract-content">
-            
-Python代码参考：合天智汇-几道图片隐写题
-题目来源：Bugku—图穷匕见
-文件下载
+            <main class="main post-page">
+    <article class="article-entry">
+        <blockquote>
+<p>Python代码参考：<a href="https://mp.weixin.qq.com/s/kxpmNpk8xAA3mbMtzyWaiw" target="_blank" rel="noopener">合天智汇-几道图片隐写题</a></p>
+<p>题目来源：Bugku—图穷匕见</p>
+<p><a href="https://share.weiyun.com/50UMgkn" target="_blank" rel="noopener">文件下载</a></p>
+</blockquote>
+<p>下载得到一张图片，一贯的套路，拖到010Editor里面看看先</p>
+<p><img src="https://i.loli.net/2018/09/28/5bae44c308c09.png" alt=""></p>
+<p>真正有东西的是后面的这部分数字和字母：</p>
+<p><img src="https://i.loli.net/2018/09/28/5bae45917728a.png" alt=""></p>
+<blockquote>
+<p>科普一下</p>
+</blockquote>
+<p><img src="https://i.loli.net/2018/09/28/5bae4610acdb4.png" alt=""></p>
+<blockquote>
+<p>Exif : <strong>可交换图像文件格式</strong>（英语：Exchangeable image file format，官方简称<strong>Exif</strong>），是专门为数码相机的照片设定的，可以记录数码照片的属性信息和拍摄数据</p>
+<p>Exif可以附加于JPEG、TIFF、RIFF 等文件之中，为其增加有关数码相机拍摄信息的内容和索引图或图像处理软件的版本信息。</p>
+</blockquote>
+<p>还是binwalk分析一下看看：</p>
+<p><img src="https://i.loli.net/2018/09/28/5bae472653d3f.png" alt=""></p>
+<p>没什么特别，看来flag就在这一串的数字字母结合的数据里头了，很明显看起来这是16进制的编码，转换一下得到下面的文本：</p>
+<blockquote>
+<p>ps:Converter，一个转换工具，功能能齐全</p>
+</blockquote>
+<p><img src="https://i.loli.net/2018/09/28/5bae48752930e.png" alt=""></p>
+<p>得到的是一堆的坐标，能够干嘛呢，后台知道通过坐标画图</p>
+<blockquote>
+<p>方法一：使用KALI 的 gnuplot </p>
+</blockquote>
+<p>百度略微了解了一下gnuplot的用法，把坐标转换成为 gnuplot 能够识别的形式</p>
+<p>用notepad++ 的替换即可完成，保存为1.txt文件，然后在Kali中进入gnuplot，执行 plot “1.txt”,得到如下图片：</p>
+<p><img src="https://i.loli.net/2018/09/28/5bae4c9870fad.png" alt=""></p>
+<p>扫码即可得到falg:</p>
+<blockquote>
+<p>flag{40fc0a979f759c8892f4dc045e28b820}</p>
+</blockquote>
+<blockquote>
+<p>方法二：利用Python编写脚本</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">n=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">canvas= np.ones((<span class="number">300</span>, <span class="number">300</span>, <span class="number">3</span>), dtype=<span class="string">"uint8"</span>)</span><br><span class="line"></span><br><span class="line">canvas=canvas*<span class="number">255</span></span><br><span class="line"></span><br><span class="line">list=open(<span class="string">"1.txt"</span>).read().split(<span class="string">"\n"</span>)</span><br><span class="line"></span><br><span class="line">list=[i.split(<span class="string">","</span>)<span class="keyword">for</span> i <span class="keyword">in</span> list]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> list:</span><br><span class="line"></span><br><span class="line">	canvas[int(p[<span class="number">0</span>]),int(p[<span class="number">1</span>])]=[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">	cv2.imwrite(<span class="string">"2.jpg"</span>,canvas)</span><br><span class="line"></span><br><span class="line">cv2.imshow(<span class="string">"Canvas"</span>,canvas)</span><br><span class="line"></span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2018/09/29/5bae518f03e02.png" alt=""></p>
+<p>扫码得到flag:</p>
+<blockquote>
+<p>flag{40fc0a979f759c8892f4dc045e28b820}</p>
+</blockquote>
 
-下载得到一张图片，一贯的套路，拖到010Editor里面看看先
-
-真正有东西的是后面的这部分数字和字母：
-
-
-科普一下
-
-
-
-Exif : 可交换图像文件格式（英语：Exchangeable image file format，官方简称Exif），是专门为数码相机的照片设定的，可以记录数码照片的属性信息和拍摄数据
-Exif可以附加于JPEG、TIFF、RIFF 等文件之中，为其增加有关数码相机拍摄信息的内容和索引图或图像处理软件的版本信息。
-
-还是binwalk分析一下看看：
-
-没什么特别，看来...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "CTF">CTF</a>
-    
-</div>
-            
-        </div>
     </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/27/Linux-文件解析/" >
-            
-                <span>Linux--文件解析</span>
-        </a>
-        <div class="abstract-content">
-            
-查看文件权限:：ls -l 或者ll
-
-
-drwxr-xr-x 3 root   root   4096 Sep 10 10:51 xxx
-drwxr-xr-x 7 ubuntu ubuntu 4096 Sep 10 10:52 xxx
-
-注释: 上述“ls -l”的结果一共有 9 列,分为 7 个部分.下面从左向右对这 7 部分信息进行解释
-
-
-drwxr-xr-x文件权限信息，有十个字符
-
-
-第一个字符表示文件类型
-
-
-
-
-字符
-文件类型
-
-
-
-
--
-普通文件
-
-
-l
-link链接文件，指向另一个文件，类似快捷方式
-
-
-d
-direct 目录文件
-
-
-b
-block块文件 硬盘 二...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/27/几道图片隐写题一/" >
-            
-                <span>几道图片隐写题</span>
-        </a>
-        <div class="abstract-content">
-            
-代码参考：合天智汇 几道隐写题目的总结
-网鼎杯 第一场MISC
-题目下载链接
-
-
-打开压缩包得到的是一张PNG格式的图片
-
-
-
-首先拖放到010Editor中：
-
-
-CTRL+F 搜索IHDR发现只有一个，没有其他问题
-
-然后放到KALI中分析一波：
-
-
-图片能够在kali中打开，说明不是宽高的隐写，因为如果修改了宽高在linux中是无法正常显示的
-
-然后binwalk分析一波：
-
-
-同样的没有什么问题
-
-最后就是放到 stegslove里面试一试了
-
-
-科普一下png的知识
-
-png支持RGBA四个通道，每个通道占8个二进制位，隐写文件或数据一般都在各个通道的低位，因为低位的变化不会...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "CTF">CTF</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/27/几道图片隐写题二/" >
-            
-                <span>几道图片隐写题二</span>
-        </a>
-        <div class="abstract-content">
-            
-网鼎杯第一场MISC—clip
-题目下载链接
-
-下载题目压缩包解压后得到两个文件 desc.txt  和  damaged.disk
-desc.txt理面是一段英文，翻译后就是：
-
-Horse Clip-ClopA strange filesystem is recovered from a damaged old hard disk.
-马夹子从损坏的旧硬盘恢复奇怪的文件系统。
-
-然后百度、Google还是看不懂，就不对这个txt文件分析了
-
-
-把 damaged.disk拖到010Editor中看看有什么信息
-
-
-文件开头，看不懂。。。。。。
-往下继续翻，CTRL+F 搜索一下 fl...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "CTF">CTF</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/26/《伊萨卡岛》/" >
-            
-                <span>《伊萨卡岛》</span>
-        </a>
-        <div class="abstract-content">
-            当你启程前往伊萨卡，
-但愿你的道路漫长，
-充满奇迹，充满发现。
-莱斯特律戈涅斯巨人，独眼巨人，
-愤怒的波塞冬海神－－不要怕他们：
-你将不会在途中碰到诸如此类的怪物，
-只要你高扬你的思想，
-只要有一种特殊的感觉，
-借出你的精神和肉体。
-莱斯特律戈涅斯巨人，独眼巨人，
-野蛮的波塞冬海神－－你将不会跟他们遭遇
-除非你将他们一直带进你的灵魂，
-除非你的灵魂将他们树立在你的面前。
-但愿你的道路漫长。
-但愿那里有很多夏天的早晨，
-当你无比快乐和兴奋地
-进入你第一次见到的海港：
-但愿你在腓尼基人的贸易市场停步
-购买精美的物件，
-珍珠母和珊瑚，琥珀和黑檀，
-各式各样销魂的香水
-－－你要多销魂就有多销魂：...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "杂文">杂文</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/06/hello-world/" >
-            
-                <span>Hello World</span>
-        </a>
-        <div class="abstract-content">
-            As my first paper:I hope my every paper will be a good way to enhance myself. I also except my paper will be able to help others.
-Hello friend.
-Helo world.
-
-from:yoloyanng
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "杂文">杂文</a>
-    
-</div>
-            
-        </div>
-    </article>
+    <!-- license  -->
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/09/27/Linux-文件解析/" title= "Linux--文件解析">
+                    <div class="prevTitle">Linux--文件解析</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -723,6 +554,24 @@ from:yoloyanng
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -916,6 +765,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
