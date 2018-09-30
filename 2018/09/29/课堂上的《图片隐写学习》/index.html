@@ -548,18 +548,15 @@ height:50vh;
 <h3 id="再次开始解题"><a href="#再次开始解题" class="headerlink" title="再次开始解题"></a>再次开始解题</h3><p>分析之后发现，不是所有的bmp文件头数据都是一样的，所以需要知道文件的大小，宽高才能够匹配正确的文件头</p>
 <p><img src="https://i.loli.net/2018/09/29/5baf933ecdf79.png" alt=""></p>
 <ul>
-<li><p>在这里可以看到文件大小为 230454 byte;</p>
-</li>
-<li><p>图像大小为 230454-54=230400 byte;</p>
-</li>
-<li><p>那么宽高是是多少呢？</p>
-<ul>
-<li>图像大小=宽*高</li>
-<li>因式分解然后猜一猜：2^10<em> 2^5 </em>3^2</li>
+<li>在这里可以看到文件大小为 230454 byte;</li>
+<li>图像大小为 230454-54=230400 byte;</li>
+<li>那么宽高是是多少呢？<ul>
+<li>这里得看位图是多少，现在常见的就是24位，每三个字节存储一个像素</li>
+<li>还有就是文件尾部看到的 00 00 00也可以得知是24位的</li>
+<li>图像大小=宽<em>高 </em>3</li>
 </ul>
 </li>
-<li><p>得知是 320*240</p>
-</li>
+<li>得知是 320<em>240 </em>3</li>
 </ul>
 <p>覆盖到文件头得到下面图片：</p>
 <p><img src="https://i.loli.net/2018/09/29/5baf9f18a92c4.png" alt=""></p>
@@ -570,6 +567,11 @@ height:50vh;
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/09/29/Vmware安装Mac过程/" title= "Vmware安装Mac过程">
+                    <div class="nextTitle">Vmware安装Mac过程</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -812,14 +814,6 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 9
@@ -838,17 +832,17 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/29</span><a class="archive-post-title" href= "/2018/09/29/Vmware安装Mac过程/" >Vmware安装Mac过程</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">09/29</span><a class="archive-post-title" href= "/2018/09/29/利用wordpress搭建博客/" >利用wordpress搭建博客</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">09/29</span><a class="archive-post-title" href= "/2018/09/29/课堂上的《图片隐写学习》/" >课堂上的《图片隐写学习》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/29</span><a class="archive-post-title" href= "/2018/09/29/Vmware安装Mac过程/" >Vmware安装Mac过程</a>
         </li>
     
     
@@ -886,13 +880,13 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="CTF"><span class="iconfont-archer">&#xe606;</span>CTF</span>
+        <span class="sidebar-tag-name" data-tags="环境配置"><span class="iconfont-archer">&#xe606;</span>环境配置</span>
     
-        <span class="sidebar-tag-name" data-tags="杂文"><span class="iconfont-archer">&#xe606;</span>杂文</span>
+        <span class="sidebar-tag-name" data-tags="CTF"><span class="iconfont-archer">&#xe606;</span>CTF</span>
     
         <span class="sidebar-tag-name" data-tags="Linux"><span class="iconfont-archer">&#xe606;</span>Linux</span>
     
-        <span class="sidebar-tag-name" data-tags="环境配置"><span class="iconfont-archer">&#xe606;</span>环境配置</span>
+        <span class="sidebar-tag-name" data-tags="杂文"><span class="iconfont-archer">&#xe606;</span>杂文</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
