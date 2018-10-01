@@ -346,42 +346,29 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/27/几道图片隐写题一/" >
+        <a class="abstract-title" href = "/2018/09/27/几道图片隐写题二/" >
             
-                <span>几道图片隐写题一</span>
+                <span>几道图片隐写题二</span>
         </a>
         <div class="abstract-content">
             
-代码参考：合天智汇 几道隐写题目的总结
-网鼎杯 第一场MISC
+网鼎杯第一场MISC—clip
 题目下载链接
 
+下载题目压缩包解压后得到两个文件 desc.txt  和  damaged.disk
+desc.txt理面是一段英文，翻译后就是：
 
-打开压缩包得到的是一张PNG格式的图片
+Horse Clip-ClopA strange filesystem is recovered from a damaged old hard disk.
+马夹子从损坏的旧硬盘恢复奇怪的文件系统。
 
-
-
-首先拖放到010Editor中：
-
-
-CTRL+F 搜索IHDR发现只有一个，没有其他问题
-
-然后放到KALI中分析一波：
+然后百度、Google还是看不懂，就不对这个txt文件分析了
 
 
-图片能够在kali中打开，说明不是宽高的隐写，因为如果修改了宽高在linux中是无法正常显示的
-
-然后binwalk分析一波：
+把 damaged.disk拖到010Editor中看看有什么信息
 
 
-同样的没有什么问题
-
-最后就是放到 stegslove里面试一试了
-
-
-科普一下png的知识
-
-png支持RGBA四个通道，每个通道占8个二进制位，隐写文件或数据一般都在各个通道的低位，因为低位的变化不会...
+文件开头，看不懂。。。。。。
+往下继续翻，CTRL+F 搜索一下 fl...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -471,29 +458,42 @@ block块文件 硬盘 二...
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/27/几道图片隐写题二/" >
+        <a class="abstract-title" href = "/2018/09/27/几道图片隐写题一/" >
             
-                <span>几道图片隐写题二</span>
+                <span>几道图片隐写题一</span>
         </a>
         <div class="abstract-content">
             
-网鼎杯第一场MISC—clip
+代码参考：合天智汇 几道隐写题目的总结
+网鼎杯 第一场MISC
 题目下载链接
 
-下载题目压缩包解压后得到两个文件 desc.txt  和  damaged.disk
-desc.txt理面是一段英文，翻译后就是：
 
-Horse Clip-ClopA strange filesystem is recovered from a damaged old hard disk.
-马夹子从损坏的旧硬盘恢复奇怪的文件系统。
-
-然后百度、Google还是看不懂，就不对这个txt文件分析了
+打开压缩包得到的是一张PNG格式的图片
 
 
-把 damaged.disk拖到010Editor中看看有什么信息
+
+首先拖放到010Editor中：
 
 
-文件开头，看不懂。。。。。。
-往下继续翻，CTRL+F 搜索一下 fl...
+CTRL+F 搜索IHDR发现只有一个，没有其他问题
+
+然后放到KALI中分析一波：
+
+
+图片能够在kali中打开，说明不是宽高的隐写，因为如果修改了宽高在linux中是无法正常显示的
+
+然后binwalk分析一波：
+
+
+同样的没有什么问题
+
+最后就是放到 stegslove里面试一试了
+
+
+科普一下png的知识
+
+png支持RGBA四个通道，每个通道占8个二进制位，隐写文件或数据一般都在各个通道的低位，因为低位的变化不会...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -903,7 +903,7 @@ from:yoloyanng
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/binwalk简单说明/" >binwalk简单说明</a>
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/wordpress主题下载/" >wordpress主题下载</a>
         </li>
     
     
@@ -913,12 +913,17 @@ from:yoloyanng
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/搭建Discuz论坛/" >搭建Discuz论坛</a>
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/binwalk简单说明/" >binwalk简单说明</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/wordpress主题下载/" >wordpress主题下载</a>
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/几道题目了解Wireshark/" >几道题目了解Wireshark</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/搭建Discuz论坛/" >搭建Discuz论坛</a>
         </li>
     
     
@@ -928,36 +933,13 @@ from:yoloyanng
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/29</span><a class="archive-post-title" href= "/2018/09/29/课堂上的《图片隐写学习》/" >课堂上的《图片隐写学习》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">09/29</span><a class="archive-post-title" href= "/2018/09/29/利用wordpress搭建博客/" >利用wordpress搭建博客</a>
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/10/01/CTF题目（bugku）/" >[Untitled Post]</a>
+            <span class="archive-post-date">09/29</span><a class="archive-post-title" href= "/2018/09/29/课堂上的《图片隐写学习》/" >课堂上的《图片隐写学习》</a>
         </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
     
     
         <li class="archive-post-item">
@@ -971,7 +953,7 @@ from:yoloyanng
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2018/09/27/几道图片隐写题二/" >几道图片隐写题二</a>
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2018/09/27/几道图片隐写题一/" >几道图片隐写题一</a>
         </li>
     
     
@@ -981,7 +963,7 @@ from:yoloyanng
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2018/09/27/几道图片隐写题一/" >几道图片隐写题一</a>
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2018/09/27/几道图片隐写题二/" >几道图片隐写题二</a>
         </li>
     
     
@@ -1001,9 +983,9 @@ from:yoloyanng
     
         <span class="sidebar-tag-name" data-tags="CTF"><span class="iconfont-archer">&#xe606;</span>CTF</span>
     
-        <span class="sidebar-tag-name" data-tags="Linux"><span class="iconfont-archer">&#xe606;</span>Linux</span>
-    
         <span class="sidebar-tag-name" data-tags="Game"><span class="iconfont-archer">&#xe606;</span>Game</span>
+    
+        <span class="sidebar-tag-name" data-tags="Linux"><span class="iconfont-archer">&#xe606;</span>Linux</span>
     
         <span class="sidebar-tag-name" data-tags="Tools"><span class="iconfont-archer">&#xe606;</span>Tools</span>
     
