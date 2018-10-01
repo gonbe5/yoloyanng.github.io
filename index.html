@@ -359,6 +359,202 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2018/10/01/CTF题目（bugku）/" >
+            
+                <span>[Untitled Post]</span>
+        </a>
+        <div class="abstract-content">
+            CTF题目（bugku）0x00 搜索 题目下载地址
+
+非正常套路：用文本编辑器打开文件，CTRL+F搜索一波关键字，flag或者key等
+
+
+
+正常做法：wireshark分析
+
+
+直接搜索key、flag是找不到的，既然题目说flag被盗，那么就试试shell、pass、php、asp，post字符串查找等
+
+ 找到可疑数据包，跟进最终TCP流，在搜索一波  
+更新中……..
+ 完整原文地址
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/01</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2018/10/01/binwalk简单说明/" >
+            
+                <span>binwalk简单说明</span>
+        </a>
+        <div class="abstract-content">
+            0x00Binwalk是一个固件的分析工具，功能十分强大，本文只是提到了一点，更高级的用法还待挖掘中…… Kali linux 自带binwalk ，其他平台安装方法也很简单，这里不再说明
+0x01再终端输入 binwalk -h来查看一下binwalk的用法
+   
+在这里一共列举了六个模块： 
+
+签名扫描选项 
+
+提取选项 
+
+熵分析选项
+
+二进制 diffing选项 
+
+原始压缩选项
+
+常规选项
+
+
+0x02题目分析 例如下面的图片 
+
+123456root@Kali:~/桌面# binwalk 123.jpgDECIMAL       HEXADECIMAL     DESCRI...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Tools">Tools</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2018/10/01/Over-the-Wire-Bandiit闯关/" >
+            
+                <span>Over the Wire -Bandit1-16</span>
+        </a>
+        <div class="abstract-content">
+            linux命令大全
+Part one
+bandit1：boJ9jbbUNNfktd78OOpsqOltutMc3MY1 
+bandit2：CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9 (虚文件名) 
+bandit3：UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK (文件名中含有空格) 
+bandit4：pIwrPrtPN36QITSp3EQaw936yaFoFgAB (隐藏文件)
+bandit5：koReBOKuIDDepwhWk7jZC0RTdopnAYKh （可读文件）
+bandit6：DXjZPULLxYr17uwoI01bNLQbtFemEg...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Game">Game</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2018/10/01/搭建Discuz论坛/" >
+            
+                <span>搭建Discuz论坛</span>
+        </a>
+        <div class="abstract-content">
+            
+需要准备LAMP环境，（apache，php，mysql）
+
+1、安装apache2(如果已经安装好的可以跳过，当然再次执行此命令也不会重复安装的）
+1sudo apt-get install apache2 -y
+2、安装 PHP 组件12sudo apt-get install php7.0 -ysudo apt-get install libapache2-mod-php7.0
+3、重启 Apache 服务：
+1sudo /etc/init.d/apache2 restart
+4、安装 MySQL 服务这个过程需要你设定密码，要能够记得住的，后面也会用到
+1sudo apt-ge...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "环境配置">环境配置</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2018/10/01/wordpress主题下载/" >
+            
+                <span>wordpress主题下载</span>
+        </a>
+        <div class="abstract-content">
+            
+搭建好wordpress之后发现主题不太合适，下载更新是弹出窗口需要登录FTP 下面就来说说不需要FTP直接就能够下载主题更新的办法
+
+ 第一步： 同样的方法将wp-content目录中的plugins（插件）和themes（主题）文件夹权限都设置为777
+123chmod -R 777 pluginschmod -R 777 themes
+第二步： 找到 wp-config.php文件的位置（在这里推荐使用宝塔面板,安装很简单)
+ 找到下面这一段代码的位置 
+123/\*WordPress目录的绝对路径 */ if ( !defined(&apos;ABSPATH&apos;) ) ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "环境配置">环境配置</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2018/10/01/CTF资源整理/" >
             
                 <span>CTF资源整理</span>
@@ -580,263 +776,11 @@ Exif可以附加于JPEG、TIFF、RIFF 等文件之中，为其增加有关数码
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/27/Linux-文件解析/" >
-            
-                <span>Linux--文件解析</span>
-        </a>
-        <div class="abstract-content">
-            
-查看文件权限:：ls -l 或者ll
-
-
-drwxr-xr-x 3 root   root   4096 Sep 10 10:51 xxx
-drwxr-xr-x 7 ubuntu ubuntu 4096 Sep 10 10:52 xxx
-
-注释: 上述“ls -l”的结果一共有 9 列,分为 7 个部分.下面从左向右对这 7 部分信息进行解释
-
-
-drwxr-xr-x文件权限信息，有十个字符
-
-
-第一个字符表示文件类型
-
-
-
-
-字符
-文件类型
-
-
-
-
--
-普通文件
-
-
-l
-link链接文件，指向另一个文件，类似快捷方式
-
-
-d
-direct 目录文件
-
-
-b
-block块文件 硬盘 二...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/27/几道图片隐写题一/" >
-            
-                <span>几道图片隐写题一</span>
-        </a>
-        <div class="abstract-content">
-            
-代码参考：合天智汇 几道隐写题目的总结
-网鼎杯 第一场MISC
-题目下载链接
-
-
-打开压缩包得到的是一张PNG格式的图片
-
-
-
-首先拖放到010Editor中：
-
-
-CTRL+F 搜索IHDR发现只有一个，没有其他问题
-
-然后放到KALI中分析一波：
-
-
-图片能够在kali中打开，说明不是宽高的隐写，因为如果修改了宽高在linux中是无法正常显示的
-
-然后binwalk分析一波：
-
-
-同样的没有什么问题
-
-最后就是放到 stegslove里面试一试了
-
-
-科普一下png的知识
-
-png支持RGBA四个通道，每个通道占8个二进制位，隐写文件或数据一般都在各个通道的低位，因为低位的变化不会...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "CTF">CTF</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/27/几道图片隐写题二/" >
-            
-                <span>几道图片隐写题二</span>
-        </a>
-        <div class="abstract-content">
-            
-网鼎杯第一场MISC—clip
-题目下载链接
-
-下载题目压缩包解压后得到两个文件 desc.txt  和  damaged.disk
-desc.txt理面是一段英文，翻译后就是：
-
-Horse Clip-ClopA strange filesystem is recovered from a damaged old hard disk.
-马夹子从损坏的旧硬盘恢复奇怪的文件系统。
-
-然后百度、Google还是看不懂，就不对这个txt文件分析了
-
-
-把 damaged.disk拖到010Editor中看看有什么信息
-
-
-文件开头，看不懂。。。。。。
-往下继续翻，CTRL+F 搜索一下 fl...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "CTF">CTF</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/26/《伊萨卡岛》/" >
-            
-                <span>《伊萨卡岛》</span>
-        </a>
-        <div class="abstract-content">
-            当你启程前往伊萨卡，
-但愿你的道路漫长，
-充满奇迹，充满发现。
-莱斯特律戈涅斯巨人，独眼巨人，
-愤怒的波塞冬海神－－不要怕他们：
-你将不会在途中碰到诸如此类的怪物，
-只要你高扬你的思想，
-只要有一种特殊的感觉，
-借出你的精神和肉体。
-莱斯特律戈涅斯巨人，独眼巨人，
-野蛮的波塞冬海神－－你将不会跟他们遭遇
-除非你将他们一直带进你的灵魂，
-除非你的灵魂将他们树立在你的面前。
-但愿你的道路漫长。
-但愿那里有很多夏天的早晨，
-当你无比快乐和兴奋地
-进入你第一次见到的海港：
-但愿你在腓尼基人的贸易市场停步
-购买精美的物件，
-珍珠母和珊瑚，琥珀和黑檀，
-各式各样销魂的香水
-－－你要多销魂就有多销魂：...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "杂文">杂文</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/06/hello-world/" >
-            
-                <span>Hello World</span>
-        </a>
-        <div class="abstract-content">
-            As my first paper:I hope my every paper will be a good way to enhance myself. I also except my paper will be able to help others.
-Hello friend.
-Helo world.
-
-from:yoloyanng
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "杂文">杂文</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">NEXT &#62;</a>
+    </nav>
     
 </main>
             <!-- profile -->
@@ -1146,9 +1090,54 @@ from:yoloyanng
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 10
+        Total : 15
         </div>
         <!-- search  -->
         
@@ -1161,6 +1150,26 @@ from:yoloyanng
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/搭建Discuz论坛/" >搭建Discuz论坛</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/wordpress主题下载/" >wordpress主题下载</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/binwalk简单说明/" >binwalk简单说明</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/Over-the-Wire-Bandiit闯关/" >Over the Wire -Bandit1-16</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1189,7 +1198,7 @@ from:yoloyanng
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2018/09/27/几道图片隐写题二/" >几道图片隐写题二</a>
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2018/09/27/Linux-文件解析/" >Linux--文件解析</a>
         </li>
     
     
@@ -1199,13 +1208,36 @@ from:yoloyanng
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2018/09/27/Linux-文件解析/" >Linux--文件解析</a>
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2018/09/27/几道图片隐写题二/" >几道图片隐写题二</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">09/26</span><a class="archive-post-title" href= "/2018/09/26/《伊萨卡岛》/" >《伊萨卡岛》</a>
         </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/10/01/CTF题目（bugku）/" >[Untitled Post]</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
     
     
         <li class="archive-post-item">
@@ -1219,11 +1251,15 @@ from:yoloyanng
     
         <span class="sidebar-tag-name" data-tags="CTF"><span class="iconfont-archer">&#xe606;</span>CTF</span>
     
-        <span class="sidebar-tag-name" data-tags="Linux"><span class="iconfont-archer">&#xe606;</span>Linux</span>
+        <span class="sidebar-tag-name" data-tags="Game"><span class="iconfont-archer">&#xe606;</span>Game</span>
+    
+        <span class="sidebar-tag-name" data-tags="Tools"><span class="iconfont-archer">&#xe606;</span>Tools</span>
     
         <span class="sidebar-tag-name" data-tags="环境配置"><span class="iconfont-archer">&#xe606;</span>环境配置</span>
     
         <span class="sidebar-tag-name" data-tags="杂文"><span class="iconfont-archer">&#xe606;</span>杂文</span>
+    
+        <span class="sidebar-tag-name" data-tags="Linux"><span class="iconfont-archer">&#xe606;</span>Linux</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

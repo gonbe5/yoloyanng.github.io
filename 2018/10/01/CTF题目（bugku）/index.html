@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Ithaca&#39;s Tavern.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name"></a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Ithaca's Tavern.</a>
 </header>
@@ -220,24 +231,68 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            [Untitled Post]
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">110</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/10/01</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,253 +393,54 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/10/01/CTF题目（bugku）/" >
-            
-                <span>[Untitled Post]</span>
-        </a>
-        <div class="abstract-content">
-            CTF题目（bugku）0x00 搜索 题目下载地址
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="CTF题目（bugku）"><a href="#CTF题目（bugku）" class="headerlink" title="CTF题目（bugku）"></a>CTF题目（bugku）</h2><h3 id="0x00-搜索"><a href="#0x00-搜索" class="headerlink" title="0x00 搜索"></a>0x00 搜索</h3><p><img src="https://i.loli.net/2018/09/10/5b961890e687c.jpg" alt="blob.jpg"> <a href="http://ctf.bugku.com/files/e0b57d15b3f8e6190e72987177da1ffd/key.pcapng" target="_blank" rel="noopener">题目下载地址</a></p>
+<blockquote>
+<p>非正常套路：用文本编辑器打开文件，CTRL+F搜索一波关键字，flag或者key等</p>
+</blockquote>
+<p><img src="https://i.loli.net/2018/09/10/5b961962b1c82.jpg" alt="blob.jpg"></p>
+<blockquote>
+<p>正常做法：wireshark分析</p>
+</blockquote>
+<ul>
+<li>直接搜索key、flag是找不到的，既然题目说flag被盗，那么就试试shell、pass、php、asp，post字符串查找等</li>
+</ul>
+<p><img src="https://i.loli.net/2018/09/10/5b961c097f9c4.jpg" alt="blob.jpg"> 找到可疑数据包，跟进最终TCP流，在搜索一波 <img src="https://i.loli.net/2018/09/10/5b961c36a1cc7.jpg" alt="blob.jpg"> </p>
+<p>更新中……..</p>
+<p> <a href="https://zhuanlan.zhihu.com/p/31512066" target="_blank" rel="noopener">完整原文地址</a></p>
 
-非正常套路：用文本编辑器打开文件，CTRL+F搜索一波关键字，flag或者key等
-
-
-
-正常做法：wireshark分析
-
-
-直接搜索key、flag是找不到的，既然题目说flag被盗，那么就试试shell、pass、php、asp，post字符串查找等
-
- 找到可疑数据包，跟进最终TCP流，在搜索一波  
-更新中……..
- 完整原文地址
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/01</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
     </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/10/01/binwalk简单说明/" >
-            
-                <span>binwalk简单说明</span>
-        </a>
-        <div class="abstract-content">
-            0x00Binwalk是一个固件的分析工具，功能十分强大，本文只是提到了一点，更高级的用法还待挖掘中…… Kali linux 自带binwalk ，其他平台安装方法也很简单，这里不再说明
-0x01再终端输入 binwalk -h来查看一下binwalk的用法
-   
-在这里一共列举了六个模块： 
-
-签名扫描选项 
-
-提取选项 
-
-熵分析选项
-
-二进制 diffing选项 
-
-原始压缩选项
-
-常规选项
-
-
-0x02题目分析 例如下面的图片 
-
-123456root@Kali:~/桌面# binwalk 123.jpgDECIMAL       HEXADECIMAL     DESCRI...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Tools">Tools</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/10/01/Over-the-Wire-Bandiit闯关/" >
-            
-                <span>Over the Wire -Bandit1-16</span>
-        </a>
-        <div class="abstract-content">
-            linux命令大全
-Part one
-bandit1：boJ9jbbUNNfktd78OOpsqOltutMc3MY1 
-bandit2：CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9 (虚文件名) 
-bandit3：UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK (文件名中含有空格) 
-bandit4：pIwrPrtPN36QITSp3EQaw936yaFoFgAB (隐藏文件)
-bandit5：koReBOKuIDDepwhWk7jZC0RTdopnAYKh （可读文件）
-bandit6：DXjZPULLxYr17uwoI01bNLQbtFemEg...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Game">Game</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/10/01/搭建Discuz论坛/" >
-            
-                <span>搭建Discuz论坛</span>
-        </a>
-        <div class="abstract-content">
-            
-需要准备LAMP环境，（apache，php，mysql）
-
-1、安装apache2(如果已经安装好的可以跳过，当然再次执行此命令也不会重复安装的）
-1sudo apt-get install apache2 -y
-2、安装 PHP 组件12sudo apt-get install php7.0 -ysudo apt-get install libapache2-mod-php7.0
-3、重启 Apache 服务：
-1sudo /etc/init.d/apache2 restart
-4、安装 MySQL 服务这个过程需要你设定密码，要能够记得住的，后面也会用到
-1sudo apt-ge...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "环境配置">环境配置</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/10/01/wordpress主题下载/" >
-            
-                <span>wordpress主题下载</span>
-        </a>
-        <div class="abstract-content">
-            
-搭建好wordpress之后发现主题不太合适，下载更新是弹出窗口需要登录FTP 下面就来说说不需要FTP直接就能够下载主题更新的办法
-
- 第一步： 同样的方法将wp-content目录中的plugins（插件）和themes（主题）文件夹权限都设置为777
-123chmod -R 777 pluginschmod -R 777 themes
-第二步： 找到 wp-config.php文件的位置（在这里推荐使用宝塔面板,安装很简单)
- 找到下面这一段代码的位置 
-123/\*WordPress目录的绝对路径 */ if ( !defined(&apos;ABSPATH&apos;) ) ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "环境配置">环境配置</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/10/01/CTF资源整理/" >
-            
-                <span>CTF资源整理</span>
-        </a>
-        <div class="abstract-content">
-            
-平时收集的一些资源，统一整理；
-一直认为CTF只是一种娱乐，一种了解，学习安全的方式，而不是成为学习的全部，所以以下选择合适的，而不是所有；
-一直认为泛而不精不该是学习应该持有的态度，知道的再多却终究到不出个所以然，和不知道又有多大的区别。专注自己兴趣所在，精力所能达到的方向，努力即可，共勉之。
-
-
-CTF练习平台网络信息安全攻防学习平台
-bugku
-Jarvis OJ
- ctf题目收集
-XCTF实训平台
-白帽学院c 
-i春秋竞赛训练营 
-合天网安
-实验吧
-南京邮电大学CTF平台
-安恒CTF月赛
-XSS挑战http://xss-quiz.int21h.jp/
-https://alf.n...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "CTF">CTF</a>
-    
-</div>
-            
-        </div>
-    </article>
+    <!-- license  -->
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/10/01/binwalk简单说明/" title= "binwalk简单说明">
+                    <div class="prevTitle">binwalk简单说明</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -662,6 +518,24 @@ https://alf.n...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CTF题目（bugku）"><span class="toc-number">1.</span> <span class="toc-text">CTF题目（bugku）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0x00-搜索"><span class="toc-number">1.1.</span> <span class="toc-text">0x00 搜索</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1035,6 +909,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
