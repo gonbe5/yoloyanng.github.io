@@ -346,6 +346,100 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2018/09/29/课堂上的《图片隐写学习》/" >
+            
+                <span>课堂上的《图片隐写学习》</span>
+        </a>
+        <div class="abstract-content">
+            前言
+第一次老师在课堂上讲授关于图片隐写的内容，觉得题目有些意思，就记录一下
+
+首先已经很明确的告诉了题目的相关信息
+
+文件格式：BMP
+工具：Winhex
+类型：图片隐写
+
+开始操作文件直接无法打开，到winhex中看一看
+
+很显然这不是bmp文件头，所以这道题目就是加个头部就可以了，最后的答案是这样的，那么找一个bmp的文件头加上去嘛
+
+加完之后，依旧是打不开的啊？？？难道是覆盖原来的地方么，那再试试吧！
+
+还是打不开，看来是我想的太简单了。。。然后找资料详细了解一下bmp文件头
+BMP文件分析
+BMP（全称Bitmap）是Windows操作系统中的标准图像文件格式，可以分成两类：设...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/29</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "CTF">CTF</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2018/09/28/几道图片隐写题三/" >
+            
+                <span>几道图片隐写题三</span>
+        </a>
+        <div class="abstract-content">
+            
+Python代码参考：合天智汇-几道图片隐写题
+题目来源：Bugku—图穷匕见
+文件下载
+
+下载得到一张图片，一贯的套路，拖到010Editor里面看看先
+
+真正有东西的是后面的这部分数字和字母：
+
+
+科普一下
+
+
+
+Exif : 可交换图像文件格式（英语：Exchangeable image file format，官方简称Exif），是专门为数码相机的照片设定的，可以记录数码照片的属性信息和拍摄数据
+Exif可以附加于JPEG、TIFF、RIFF 等文件之中，为其增加有关数码相机拍摄信息的内容和索引图或图像处理软件的版本信息。
+
+还是binwalk分析一下看看：
+
+没什么特别，看来...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/28</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "CTF">CTF</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2018/09/27/几道图片隐写题二/" >
             
                 <span>几道图片隐写题二</span>
@@ -885,9 +979,29 @@ from:yoloyanng
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 15
+        Total : 17
         </div>
         <!-- search  -->
         
@@ -903,22 +1017,12 @@ from:yoloyanng
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/wordpress主题下载/" >wordpress主题下载</a>
+            <span class="archive-post-date">10/07</span><a class="archive-post-title" href= "/2018/10/07/Docker-Learning-day1/" >Docker-Learning_day1</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/Over-the-Wire-Bandiit闯关/" >Over the Wire -Bandit1-16</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/binwalk简单说明/" >binwalk简单说明</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/几道题目了解Wireshark/" >几道题目了解Wireshark</a>
+            <span class="archive-post-date">10/06</span><a class="archive-post-title" href= "/2018/10/06/南邮CTF-re-writeup/" >南邮CTF_re_writeup</a>
         </li>
     
     
@@ -928,17 +1032,37 @@ from:yoloyanng
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/几道题目了解Wireshark/" >几道题目了解Wireshark</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/Over-the-Wire-Bandiit闯关/" >Over the Wire -Bandit1-16</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/wordpress主题下载/" >wordpress主题下载</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/binwalk简单说明/" >binwalk简单说明</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">10/01</span><a class="archive-post-title" href= "/2018/10/01/CTF资源整理/" >CTF资源整理</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/29</span><a class="archive-post-title" href= "/2018/09/29/利用wordpress搭建博客/" >利用wordpress搭建博客</a>
+            <span class="archive-post-date">09/29</span><a class="archive-post-title" href= "/2018/09/29/课堂上的《图片隐写学习》/" >课堂上的《图片隐写学习》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/29</span><a class="archive-post-title" href= "/2018/09/29/课堂上的《图片隐写学习》/" >课堂上的《图片隐写学习》</a>
+            <span class="archive-post-date">09/29</span><a class="archive-post-title" href= "/2018/09/29/利用wordpress搭建博客/" >利用wordpress搭建博客</a>
         </li>
     
     
@@ -981,17 +1105,19 @@ from:yoloyanng
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="CTF"><span class="iconfont-archer">&#xe606;</span>CTF</span>
-    
-        <span class="sidebar-tag-name" data-tags="Game"><span class="iconfont-archer">&#xe606;</span>Game</span>
+        <span class="sidebar-tag-name" data-tags="docker"><span class="iconfont-archer">&#xe606;</span>docker</span>
     
         <span class="sidebar-tag-name" data-tags="Linux"><span class="iconfont-archer">&#xe606;</span>Linux</span>
+    
+        <span class="sidebar-tag-name" data-tags="CTF"><span class="iconfont-archer">&#xe606;</span>CTF</span>
     
         <span class="sidebar-tag-name" data-tags="Tools"><span class="iconfont-archer">&#xe606;</span>Tools</span>
     
         <span class="sidebar-tag-name" data-tags="环境配置"><span class="iconfont-archer">&#xe606;</span>环境配置</span>
     
         <span class="sidebar-tag-name" data-tags="杂文"><span class="iconfont-archer">&#xe606;</span>杂文</span>
+    
+        <span class="sidebar-tag-name" data-tags="Game"><span class="iconfont-archer">&#xe606;</span>Game</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
