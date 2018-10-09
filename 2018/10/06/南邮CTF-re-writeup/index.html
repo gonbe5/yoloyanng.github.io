@@ -8,14 +8,13 @@
   <link rel="dns-prefetch" href="https://yoloyanng.github.io">
   <title>南邮CTF_re_writeup | Ithaca&#39;s Tavern</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hello RE!直接把题目放到ida中打开  然后F5反编译，发现没有反应，百度得知用的是64位的ida打开的32位的程序，无法反编译，遂换成32位，F5之后如下：  123while ( scanf(&quot;%s&quot;, v4) != -1 &amp;amp;&amp;amp; strcmp(v4, (const char *)&amp;amp;v5) )	printf(&quot;flag错误。再试试？\n&quot;);printf(&quot;fla">
-<meta name="keywords" content="CTF">
+  <meta name="keywords" content="CTF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="南邮CTF_re_writeup">
 <meta property="og:url" content="https://yoloyanng.github.io/2018/10/06/南邮CTF-re-writeup/index.html">
 <meta property="og:site_name" content="Ithaca&#39;s Tavern">
-<meta property="og:description" content="Hello RE!直接把题目放到ida中打开  然后F5反编译，发现没有反应，百度得知用的是64位的ida打开的32位的程序，无法反编译，遂换成32位，F5之后如下：  123while ( scanf(&quot;%s&quot;, v4) != -1 &amp;amp;&amp;amp; strcmp(v4, (const char *)&amp;amp;v5) )	printf(&quot;flag错误。再试试？\n&quot;);printf(&quot;fla">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbc1033223c5.jpg">
 <meta property="og:image" content="https://i.loli.net/2018/10/04/5bb5728d5fa66.png">
 <meta property="og:image" content="https://i.loli.net/2018/10/04/5bb5730078f3e.png">
 <meta property="og:image" content="https://i.loli.net/2018/10/04/5bb5761421536.png">
@@ -29,11 +28,10 @@
 <meta property="og:image" content="https://i.loli.net/2018/10/07/5bba2a39e24ef.png">
 <meta property="og:image" content="https://i.loli.net/2018/10/07/5bba2a76cbc25.png">
 <meta property="og:image" content="https://i.loli.net/2018/10/08/5bba2ffc3a911.png">
-<meta property="og:updated_time" content="2018-10-08T14:41:46.582Z">
+<meta property="og:updated_time" content="2018-10-09T02:19:49.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="南邮CTF_re_writeup">
-<meta name="twitter:description" content="Hello RE!直接把题目放到ida中打开  然后F5反编译，发现没有反应，百度得知用的是64位的ida打开的32位的程序，无法反编译，遂换成32位，F5之后如下：  123while ( scanf(&quot;%s&quot;, v4) != -1 &amp;amp;&amp;amp; strcmp(v4, (const char *)&amp;amp;v5) )	printf(&quot;flag错误。再试试？\n&quot;);printf(&quot;fla">
-<meta name="twitter:image" content="https://i.loli.net/2018/10/04/5bb5728d5fa66.png">
+<meta name="twitter:image" content="https://i.loli.net/2018/10/09/5bbc1033223c5.jpg">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -63,7 +61,7 @@
 			<img src="/assets/img/Misaka.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">yoloyanng</a></h1>
+		  <h1 class="header-author"><a href="/">Ithaca</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">不成问题的问题</p>
@@ -96,9 +94,9 @@
 				
 					<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yanng-82/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="mail" target="_blank" href="/yoloyanng@qq.com" title="mail"><i class="icon-mail"></i></a>
+					<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
 		        
 			</div>
 		</nav>
@@ -119,7 +117,7 @@
 				<img src="/assets/img/Misaka.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">yoloyanng</h1>
+			  <h1 class="header-author js-header-author">Ithaca</h1>
 			</hgroup>
 			
 			<p class="header-subtitle"><i class="icon icon-quo-left"></i>不成问题的问题<i class="icon icon-quo-right"></i></p>
@@ -135,9 +133,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yanng-82/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="mail" target="_blank" href="/yoloyanng@qq.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
 			        
 				</div>
 			</nav>
@@ -181,7 +179,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Hello-RE"><a href="#Hello-RE" class="headerlink" title="Hello RE!"></a>Hello RE!</h2><p>直接把题目放到ida中打开</p>
+        <p><img src="https://i.loli.net/2018/10/09/5bbc1033223c5.jpg" alt=""></p>
+<a id="more"></a>
+<h2 id="Hello-RE"><a href="#Hello-RE" class="headerlink" title="Hello RE!"></a>Hello RE!</h2><p>直接把题目放到ida中打开</p>
 <p><img src="https://i.loli.net/2018/10/04/5bb5728d5fa66.png" alt=""></p>
 <p>然后F5反编译，发现没有反应，百度得知用的是64位的ida打开的32位的程序，无法反编译，遂换成32位，F5之后如下：</p>
 <p><img src="https://i.loli.net/2018/10/04/5bb5730078f3e.png" alt=""></p>
@@ -447,7 +447,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 yoloyanng
+    		&copy; 2018 Ithaca
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -567,15 +567,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Tools</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">环境配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">

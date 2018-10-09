@@ -8,20 +8,18 @@
   <link rel="dns-prefetch" href="https://yoloyanng.github.io">
   <title>Linux--文件解析 | Ithaca&#39;s Tavern</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="查看文件权限:：ls -l 或者ll   drwxr-xr-x 3 root   root   4096 Sep 10 10:51 xxx drwxr-xr-x 7 ubuntu ubuntu 4096 Sep 10 10:52 xxx  注释: 上述“ls -l”的结果一共有 9 列,分为 7 个部分.下面从左向右对这 7 部分信息进行解释 drwxr-xr-x文件权限信息，有十个字符   第">
-<meta name="keywords" content="Linux">
+  <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux--文件解析">
 <meta property="og:url" content="https://yoloyanng.github.io/2018/09/27/Linux-文件解析/index.html">
 <meta property="og:site_name" content="Ithaca&#39;s Tavern">
-<meta property="og:description" content="查看文件权限:：ls -l 或者ll   drwxr-xr-x 3 root   root   4096 Sep 10 10:51 xxx drwxr-xr-x 7 ubuntu ubuntu 4096 Sep 10 10:52 xxx  注释: 上述“ls -l”的结果一共有 9 列,分为 7 个部分.下面从左向右对这 7 部分信息进行解释 drwxr-xr-x文件权限信息，有十个字符   第">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbc0da62a51e.png">
 <meta property="og:image" content="https://i.loli.net/2018/09/14/5b9b535ab4122.jpg">
-<meta property="og:updated_time" content="2018-09-26T16:56:03.707Z">
+<meta property="og:updated_time" content="2018-10-09T02:08:55.166Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux--文件解析">
-<meta name="twitter:description" content="查看文件权限:：ls -l 或者ll   drwxr-xr-x 3 root   root   4096 Sep 10 10:51 xxx drwxr-xr-x 7 ubuntu ubuntu 4096 Sep 10 10:52 xxx  注释: 上述“ls -l”的结果一共有 9 列,分为 7 个部分.下面从左向右对这 7 部分信息进行解释 drwxr-xr-x文件权限信息，有十个字符   第">
-<meta name="twitter:image" content="https://i.loli.net/2018/09/14/5b9b535ab4122.jpg">
+<meta name="twitter:image" content="https://i.loli.net/2018/10/09/5bbc0da62a51e.png">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -51,7 +49,7 @@
 			<img src="/assets/img/Misaka.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">yoloyanng</a></h1>
+		  <h1 class="header-author"><a href="/">Ithaca</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">不成问题的问题</p>
@@ -84,9 +82,9 @@
 				
 					<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yanng-82/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="mail" target="_blank" href="/yoloyanng@qq.com" title="mail"><i class="icon-mail"></i></a>
+					<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
 		        
 			</div>
 		</nav>
@@ -107,7 +105,7 @@
 				<img src="/assets/img/Misaka.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">yoloyanng</h1>
+			  <h1 class="header-author js-header-author">Ithaca</h1>
 			</hgroup>
 			
 			<p class="header-subtitle"><i class="icon icon-quo-left"></i>不成问题的问题<i class="icon icon-quo-right"></i></p>
@@ -123,9 +121,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yanng-82/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="mail" target="_blank" href="/yoloyanng@qq.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
 			        
 				</div>
 			</nav>
@@ -169,7 +167,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
+        <p><img src="https://i.loli.net/2018/10/09/5bbc0da62a51e.png" alt=""></p>
+<a id="more"></a>
+<blockquote>
 <p>查看文件权限:：ls -l 或者ll</p>
 </blockquote>
 <p><img src="https://i.loli.net/2018/09/14/5b9b535ab4122.jpg" alt="1"></p>
@@ -564,8 +564,8 @@
     </a>
   
   
-    <a href="/2018/09/27/几道图片隐写题二/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">几道图片隐写题二</div>
+    <a href="/2018/09/26/《伊萨卡岛》/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《伊萨卡岛》</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -608,7 +608,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 yoloyanng
+    		&copy; 2018 Ithaca
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -728,15 +728,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Tools</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">环境配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -47,7 +47,7 @@
 			<img src="/assets/img/Misaka.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">yoloyanng</a></h1>
+		  <h1 class="header-author"><a href="/">Ithaca</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">不成问题的问题</p>
@@ -80,9 +80,9 @@
 				
 					<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yanng-82/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="mail" target="_blank" href="/yoloyanng@qq.com" title="mail"><i class="icon-mail"></i></a>
+					<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
 		        
 			</div>
 		</nav>
@@ -103,7 +103,7 @@
 				<img src="/assets/img/Misaka.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">yoloyanng</h1>
+			  <h1 class="header-author js-header-author">Ithaca</h1>
 			</hgroup>
 			
 			<p class="header-subtitle"><i class="icon icon-quo-left"></i>不成问题的问题<i class="icon icon-quo-right"></i></p>
@@ -119,9 +119,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yanng-82/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="mail" target="_blank" href="/yoloyanng@qq.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
 			        
 				</div>
 			</nav>
@@ -246,48 +246,10 @@
         <blockquote>
 <p>在此前，一直想要去学习一下docker这个到现在依旧陌生的东西，或者是心血来潮，那么就一鼓作气学懂一二吧</p>
 </blockquote>
-<h3 id="0x00-什么是Docker"><a href="#0x00-什么是Docker" class="headerlink" title="0x00 什么是Docker?"></a>0x00 什么是Docker?</h3><blockquote>
-<p>百度百科</p>
-</blockquote>
-<p>​    Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。</p>
-<p>​    Docker 使用客户端-服务器 (C/S) 架构模式，使用远程API来管理和创建Docker容器。Docker 容器通过 Docker 镜像来创建。容器与镜像的关系类似于面向对象编程中的对象与类。</p>
-<hr>
-<h3 id="Docker-的优点"><a href="#Docker-的优点" class="headerlink" title="Docker 的优点"></a>Docker 的优点</h3><blockquote>
-<p>菜鸟教程</p>
-</blockquote>
-<ul>
-<li><p><strong>1、简化程序：</strong><br>Docker 让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，便可以实现虚拟化。Docker改变了虚拟化的方式，使开发者可以直接将自己的成果放入Docker中进行管理。方便快捷已经是 Docker的最大优势，过去需要用数天乃至数周的    任务，在Docker容器的处理下，只需要数秒就能完成。</p>
-</li>
-<li><p><strong>2、避免选择恐惧症：</strong><br>如果你有选择恐惧症，还是资深患者。Docker 帮你    打包你的纠结！比如 Docker 镜像；Docker 镜像中包含了运行环境和配置，所以 Docker 可以简化部署多种应用实例工作。比如 Web 应用、后台应用、数据库应用、大数据应用比如 Hadoop 集群、消息队列等等都可以打包成一个镜像部署。</p>
-</li>
-<li><p><strong>3、节省开支：</strong><br>一方面，云计算时代到来，使开发者不必为了追求效果而配置高额的硬件，Docker 改变了高性能必然高价格的思维定势。Docker 与云的结合，让云空间得到更充分的利用。不仅解决了硬件管理的问题，也改变了虚拟化的方式。</p>
-</li>
-</ul>
-<hr>
-<h3 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h3><blockquote>
-<p>安装环境：ubuntu16.04 </p>
-</blockquote>
-<ol>
-<li><p>Docker要求Ubuntu系统的内核版本高于3.10，所以来看一下：</p>
-<p><img src="https://i.loli.net/2018/10/07/5bb9e8794bc72.png" alt=""></p>
-</li>
-<li><p>更新一下apt索引:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果在此前已经安装过较旧版本的docker,使用下面的命令卸载：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove docker docker-engine docker.io</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>允许 apt 通过HTTPS使用存储库:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install \</span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    software-properties-common</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加Docker的官方GPG密钥:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>验证现在拥有带指纹的密钥</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key fingerprint 0EBFCD88</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
+<p><img src="https://i.loli.net/2018/10/09/5bbc0d0b529a3.png" alt=""></p>
+        
+          <a class="article-more-a" href="/2018/10/07/Docker-Learning-day1/#more">More >></a>
+        
       
 
       
@@ -360,105 +322,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Hello-RE"><a href="#Hello-RE" class="headerlink" title="Hello RE!"></a>Hello RE!</h2><p>直接把题目放到ida中打开</p>
-<p><img src="https://i.loli.net/2018/10/04/5bb5728d5fa66.png" alt=""></p>
-<p>然后F5反编译，发现没有反应，百度得知用的是64位的ida打开的32位的程序，无法反编译，遂换成32位，F5之后如下：</p>
-<p><img src="https://i.loli.net/2018/10/04/5bb5730078f3e.png" alt=""></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> ( <span class="built_in">scanf</span>(<span class="string">"%s"</span>, v4) != <span class="number">-1</span> &amp;&amp; <span class="built_in">strcmp</span>(v4, (<span class="keyword">const</span> <span class="keyword">char</span> *)&amp;v5) )</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"flag错误。再试试？\n"</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"flag正确。\n"</span>);</span><br></pre></td></tr></table></figure>
-<p>所以在运行是不会有flag输出的，然后看看题目中的说明：</p>
-<ul>
-<li>PS:IDA里面按R可以把奇怪的数字变成字符串</li>
-</ul>
-<p>所以对每个数字串按R得到下面的倒序的flag:</p>
-<p><img src="https://i.loli.net/2018/10/04/5bb5761421536.png" alt=""></p>
-<p><code>flag{Welcome_To_RE_World!}</code></p>
-<hr>
-<h2 id="ReadAsm2"><a href="#ReadAsm2" class="headerlink" title="ReadAsm2"></a>ReadAsm2</h2><p><a href="https://www.cnblogs.com/Chesky/p/nuptzj_re_writeup.html" target="_blank" rel="noopener">参考文章</a></p>
-<blockquote>
-<p>ax (accumulator)···························可用于存放函数返回值<br>bp (base pointer)···························用于存放执行中的函数对应的栈帧的栈底地址<br>sp (stack poinger)··························用于存放执行中的函数对应的栈帧的栈顶地址<br>ip (instruction pointer)··················指向当前执行指令的下一条指令</p>
-<p><strong>前缀加上 r 表示 64 位， e 表示 32 位</strong></p>
-<p>word : 表示字、q：四字 、d：双字</p>
-<p>ptr: 指针（pointer）<br>没有寄存器名时， X ptr 指明内存单元的长度，X 在汇编指令中可以为word 或 byte </p>
-<p>内存地址：[ ]</p>
-<p>movsxd ：扩展至零指令</p>
-<p> xor：逻辑异或运算指令</p>
-<p>jle：小于等于时转移</p>
-</blockquote>
-<p><img src="https://i.loli.net/2018/10/04/5bb5ed075bffe.png" alt=""></p>
-<p>python3代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">input = [<span class="number">0x67</span>,<span class="number">0x6e</span>,<span class="number">0x62</span>,<span class="number">0x63</span>,<span class="number">0x7e</span>,<span class="number">0x74</span>, <span class="number">0x62</span>, <span class="number">0x69</span>, <span class="number">0x6d</span>, <span class="number">0x55</span>, <span class="number">0x6a</span>, <span class="number">0x7f</span>, <span class="number">0x60</span>, <span class="number">0x51</span>, <span class="number">0x66</span>, <span class="number">0x63</span>, <span class="number">0x4e</span>, <span class="number">0x66</span>, <span class="number">0x7b</span>,<span class="number">0x71</span>, <span class="number">0x4a</span>, <span class="number">0x74</span>, <span class="number">0x76</span>, <span class="number">0x6b</span>, <span class="number">0x70</span>, <span class="number">0x79</span>, <span class="number">0x66</span> , <span class="number">0x1c</span>]</span><br><span class="line">flag = <span class="string">""</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">28</span>):</span><br><span class="line">    flag = flag + chr(input[x<span class="number">-1</span>]^ x)</span><br><span class="line">print(flag)</span><br></pre></td></tr></table></figure>
-<p>运行得到f：flag{read_asm_is_the_basic}</p>
-<hr>
-<h2 id="Py交易"><a href="#Py交易" class="headerlink" title="Py交易"></a>Py交易</h2><p>下载得到的一个pyc文件，通过python的反编译得到如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">encode</span><span class="params">(message)</span>:</span></span><br><span class="line">    s = <span class="string">''</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> message:</span><br><span class="line">        x = ord(i) ^ <span class="number">32</span></span><br><span class="line">        x = x + <span class="number">16</span></span><br><span class="line">        s += chr(x)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> base64.b64encode(s)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">correct = <span class="string">'XlNkVmtUI1MgXWBZXCFeKY+AaXNt'</span></span><br><span class="line">flag = <span class="string">''</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'Input flag:'</span></span><br><span class="line">flag = raw_input()</span><br><span class="line"><span class="keyword">if</span> encode(flag) == correct:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'correct'</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">print</span> <span class="string">'wrong'</span></span><br></pre></td></tr></table></figure>
-<p>分析这段代码很容易知道，只要对correct中的字符串倒着执行上面的代码得到的就是最后的flag了</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line">flag=<span class="string">''</span></span><br><span class="line">s=<span class="string">'XlNkVmtUI1MgXWBZXCFeKY+AaXNt'</span></span><br><span class="line">s=base64.b64decode(s)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> s:</span><br><span class="line">	x=ord(i)<span class="number">-16</span></span><br><span class="line">	x=x^<span class="number">32</span></span><br><span class="line">	flag+=chr(x)</span><br><span class="line"><span class="keyword">print</span> flag</span><br></pre></td></tr></table></figure>
-<p>最后输出flag：nctf{d3c0mpil1n9_PyC}</p>
-<hr>
-<h2 id="WxyVM1"><a href="#WxyVM1" class="headerlink" title="WxyVM1"></a>WxyVM1</h2><p>下载得到一个无后缀名的文件，那么在010Editor中打开得到：</p>
-<p><img src="https://i.loli.net/2018/10/04/5bb604396b533.png" alt=""></p>
-<p>是一个ELF文件，在这里不作过多说明了，在linux中打开执行，，，，</p>
-<p>发现不会Linux的GDB怎么用啊！！！！那就算了，老实用IDA打开吧。。。</p>
-<p>F5 得到伪代码如下：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">__int64 __<span class="function">fastcall <span class="title">main</span><span class="params">(__int64 a1, <span class="keyword">char</span> **a2, <span class="keyword">char</span> **a3)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">char</span> v4; <span class="comment">// [sp+Bh] [bp-5h]@1</span></span><br><span class="line">  <span class="keyword">signed</span> <span class="keyword">int</span> i; <span class="comment">// [sp+Ch] [bp-4h]@3</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">"[WxyVM 0.0.1]"</span>);  </span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">"input your flag:"</span>);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%s"</span>, &amp;byte_604B80);   <span class="comment">//将输入的flag值保存到byte_604B80</span></span><br><span class="line">  v4 = <span class="number">1</span>;</span><br><span class="line">  sub_4005B6();        <span class="comment">//调用函数</span></span><br><span class="line">  <span class="keyword">if</span> ( <span class="built_in">strlen</span>(&amp;byte_604B80) != <span class="number">24</span> )  <span class="comment">//判断flag的长度是不是等于24</span></span><br><span class="line">    v4 = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt;= <span class="number">23</span>; ++i )       <span class="comment">//for循环</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> ( *(&amp;byte_604B80 + i) != dword_601060[i] )     </span><br><span class="line">        <span class="comment">//比较604B80加上i的地址处保存的值与601060处的值</span></span><br><span class="line">      v4 = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> ( v4 )</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"correct"</span>);</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"wrong"</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0L</span>L;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">__<span class="function">int64 <span class="title">sub_4005B6</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">int</span> v0;   <span class="comment">// ST04_4@3</span></span><br><span class="line">  __int64 result;    <span class="comment">// rax@3</span></span><br><span class="line">  <span class="keyword">signed</span> <span class="keyword">int</span> i;     <span class="comment">// [sp+0h] [bp-10h]@1</span></span><br><span class="line">  <span class="keyword">char</span> v3;          <span class="comment">// [sp+8h] [bp-8h]@3</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt;= <span class="number">14999</span>; i += <span class="number">3</span> )  <span class="comment">//15000个元素，3个一组</span></span><br><span class="line">  &#123;</span><br><span class="line">    v0 = byte_6010C0[(<span class="keyword">signed</span> __int64)i];</span><br><span class="line">    v3 = byte_6010C0[(<span class="keyword">signed</span> __int64)(i + <span class="number">2</span>)];</span><br><span class="line">    result = v0;</span><br><span class="line">    <span class="keyword">switch</span> ( v0 )</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">case</span> <span class="number">1u</span>:</span><br><span class="line">        result = byte_6010C0[(<span class="keyword">signed</span> __int64)(i + <span class="number">1</span>)];</span><br><span class="line">        *(&amp;byte_604B80 + result) += v3;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="number">2u</span>:</span><br><span class="line">        result = byte_6010C0[(<span class="keyword">signed</span> __int64)(i + <span class="number">1</span>)];</span><br><span class="line">        *(&amp;byte_604B80 + result) -= v3;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="number">3u</span>:</span><br><span class="line">        result = byte_6010C0[(<span class="keyword">signed</span> __int64)(i + <span class="number">1</span>)];</span><br><span class="line">        *(&amp;byte_604B80 + result) ^= v3;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="number">4u</span>:</span><br><span class="line">        result = byte_6010C0[(<span class="keyword">signed</span> __int64)(i + <span class="number">1</span>)];</span><br><span class="line">        *(&amp;byte_604B80 + result) *= v3;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="number">5u</span>:</span><br><span class="line">        result = byte_6010C0[(<span class="keyword">signed</span> __int64)(i + <span class="number">1</span>)];</span><br><span class="line">        *(&amp;byte_604B80 + result) ^= *(&amp;byte_604B80 + byte_6010C0[(<span class="keyword">signed</span> __int64)(i + <span class="number">2</span>)]);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/10/04/5bb61162ed854.png" alt=""></p>
-<ul>
-<li><p>数组各元素的地址逐个间隔4位，因为 dword 为4字节型，所以多余的FF，00不读入</p>
-</li>
-<li><p>得到 dword_601060 = [C4,34,22,B1,D3,11,97,7,DB,37,C4,6,1D,FC,5B,ED,98,DF,94,D8,B3,84,CC,8]</p>
-</li>
-<li><p>byte_6010C0 数组的 15000个元素按顺序三个一组分成5000组子序列，分别是v0、result、v3</p>
-</li>
-<li><p>v0检测那种运算（加、减，乘，异或），result选择哪一位进行运算，v3是运算数</p>
-</li>
-<li><p>在怎么把从0x6010c0至之后的15000个字节截取出来，弄了半天，经过各种百度，Google之后找到办法。</p>
-<p>在IDA中的HEX VIEW中选中需要截取的部分另存为文件即可</p>
-</li>
-</ul>
-<p>得到C语言脚本如下：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> filename <span class="meta-string">"G:\\HTR"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,flen;</span><br><span class="line">    <span class="keyword">char</span> *p;</span><br><span class="line">    FILE*fp;</span><br><span class="line">    <span class="keyword">int</span> result,a;</span><br><span class="line">    <span class="keyword">char</span> input[<span class="number">24</span>]=&#123;<span class="number">0xC4</span>,<span class="number">0X34</span>,<span class="number">0X22</span>,<span class="number">0XB1</span>,<span class="number">0XD3</span>,<span class="number">0X11</span>,<span class="number">0X97</span>,<span class="number">0X7</span>,<span class="number">0XDB</span>,<span class="number">0X37</span>,<span class="number">0XC4</span>,<span class="number">0X6</span>,<span class="number">0X1D</span>,<span class="number">0XFC</span>,<span class="number">0X5B</span>,<span class="number">0XED</span>,<span class="number">0X98</span>,<span class="number">0XDF</span>,<span class="number">0X94</span>,<span class="number">0XD8</span>,<span class="number">0XB3</span>,<span class="number">0X84</span>,<span class="number">0XCC</span>,<span class="number">0X8</span>&#125;;</span><br><span class="line"></span><br><span class="line">    fp=fopen(filename,<span class="string">"rb"</span>);    <span class="comment">//以二进制方式读文件 </span></span><br><span class="line"></span><br><span class="line">    fseek(fp,<span class="number">0L</span>,SEEK_END);   <span class="comment">//意思是把fp文件读写位置指针从文件尾倒数0个字节，即文件尾部 </span></span><br><span class="line">    flen=ftell(fp);         <span class="comment">//获取文件的当前读写位置; </span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d个字节\n"</span>,flen);     <span class="comment">//打印文件一共多少个字节 </span></span><br><span class="line">    </span><br><span class="line">	p=(<span class="keyword">char</span> *)<span class="built_in">malloc</span>(flen+<span class="number">1</span>);  </span><br><span class="line">    <span class="keyword">if</span>(p==<span class="literal">NULL</span>)&#123;</span><br><span class="line">       fclose(fp);</span><br><span class="line">       <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    fseek(fp,<span class="number">0L</span>,SEEK_SET);  <span class="comment">//定位到文件开头 </span></span><br><span class="line">    fread(p,flen,<span class="number">1</span>,fp);     <span class="comment">//一次性读取全部内容 </span></span><br><span class="line">    p[flen]=<span class="number">0</span>;              <span class="comment">//字符串结束标志 </span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">15000</span>;i&gt;=<span class="number">0</span>;i-=<span class="number">3</span>)&#123;</span><br><span class="line">        <span class="keyword">switch</span>(p[i])&#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">1</span>:result=p[i+<span class="number">1</span>];</span><br><span class="line">                    input[result]-=p[i+<span class="number">2</span>];</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>:result=p[i+<span class="number">1</span>];</span><br><span class="line">                    input[result]+=p[i+<span class="number">2</span>];</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> <span class="number">3</span>:result=p[i+<span class="number">1</span>];</span><br><span class="line">                    input[result]^=p[i+<span class="number">2</span>];</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> <span class="number">4</span>:result=p[i+<span class="number">1</span>];</span><br><span class="line">                    input[result]/=p[i+<span class="number">2</span>];</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> <span class="number">5</span>:result=p[i+<span class="number">1</span>];</span><br><span class="line">                    a=p[i+<span class="number">2</span>];</span><br><span class="line">                    input[result]^=input[a];</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:<span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"==========================\n"</span>);</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">24</span>;i++)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%c"</span>,input[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行得到flag：nctf{Embr4ce_Vm_j0in_R3}</p>
-<hr>
-<h2 id="maze"><a href="#maze" class="headerlink" title="maze"></a>maze</h2><p>在IDA中打开得到伪代码如下：</p>
-<p><img src="https://i.loli.net/2018/10/08/5bbaef3630ef6.png" alt=""></p>
-<p>代码太长了，切换到图表来看看：</p>
-<p><img src="https://i.loli.net/2018/10/08/5bbaf0b1e2481.png" alt=""></p>
-<p>可以看到   “<strong>.</strong>“ ,”<strong>0</strong>“,”<strong>o</strong>“ , “<strong>O</strong>“,跳转到不同位置</p>
-<blockquote>
-<p><strong>”.“</strong>     ：</p>
-</blockquote>
-<p><img src="https://i.loli.net/2018/10/08/5bbaf228a2e0f.png" alt=""></p>
-<p><img src="https://i.loli.net/2018/10/06/5bb8c8070f2eb.png" alt=""></p>
-<p>分析一波代码：</p>
-<p><strong>if ( strlen(&amp;s1) != 24 || strncmp(&amp;s1, “nctf{“, 5uLL) || *(&amp;byte_6010BF + 24) != 125 )</strong></p>
-<ul>
-<li>flag的长度为24. 前五个字符为<strong>nctf{</strong></li>
-<li></li>
-</ul>
-<hr>
-<h2 id="你大概需要一个优秀的mac"><a href="#你大概需要一个优秀的mac" class="headerlink" title="你大概需要一个优秀的mac"></a>你大概需要一个优秀的mac</h2><p>确实我也没有MAC，只能再次找到IDA ，找到main函数，F5大法查看伪代码：</p>
-<p><img src="https://i.loli.net/2018/10/07/5bba2a39e24ef.png" alt=""></p>
-<p><img src="https://i.loli.net/2018/10/07/5bba2a76cbc25.png" alt=""></p>
-<p>分析func1、xfun1、xfun2、xfun3、xfun4、xfun5函数得知这几个函数的功能就是：</p>
-<blockquote>
-<p>func1：每个字符与0xDE异或</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; *(_BYTE *)(a1 + i) ^= <span class="number">0xDE</span>u;  <span class="comment">//将a1+i转换为指向字节的指针，该地址处字节的值与0xDE异或</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-<p>xfun1：flag前10位与 0xAD异或</p>
-<p>xfun2：接下来10位与 0xBE异或</p>
-<p>xfun3：接下来10位与 0xEF异或</p>
-<p>xfun4：接下来10位与 0xAB异或</p>
-<p>xfun5：接下来16位与 0xEF异或</p>
-<p>check：将异或后的flag与10000ED0处的56个字符进行比较</p>
-</blockquote>
-<p><img src="https://i.loli.net/2018/10/08/5bba2ffc3a911.png" alt=""></p>
-<p>所以只需要逆向操作就可以了</p>
-<p>得到Python3脚本如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">num=[<span class="number">0x15</span>,<span class="number">0x1F</span>,<span class="number">0x12</span>,<span class="number">0x14</span>,<span class="number">0x8</span>,<span class="number">0x3A</span>,<span class="number">0x46</span>,<span class="number">0x2C</span>,<span class="number">0x7</span>,<span class="number">0x1B</span>,<span class="number">0x51</span>,<span class="number">0x13</span>,<span class="number">0x3F</span>,<span class="number">0x57</span>,<span class="number">0x8</span>,<span class="number">0x5</span>,<span class="number">0x3F</span>,<span class="number">0x30</span>,<span class="number">0x32</span>,<span class="number">0x51</span>,<span class="number">0x52</span>,<span class="number">0x2</span>,<span class="number">0x6E</span>,<span class="number">0x78</span>,<span class="number">0x16</span>,<span class="number">0x7C</span>,<span class="number">0x6E</span>,<span class="number">0x61</span>,<span class="number">0x70</span>,<span class="number">0x48</span>,<span class="number">0x1C</span>,<span class="number">0x3B</span>,<span class="number">0x32</span>,<span class="number">0x2A</span>,<span class="number">0x13</span>,<span class="number">0x45</span>,<span class="number">0x7</span>,<span class="number">0x2A</span>,<span class="number">0x18</span>,<span class="number">0x0C</span>,<span class="number">0x6E</span>,<span class="number">0x41</span>,<span class="number">0x70</span>,<span class="number">0x4</span>,<span class="number">0x6</span>,<span class="number">0x6E</span>,<span class="number">0x5C</span>,<span class="number">0x0</span>,<span class="number">0x42</span>,<span class="number">0x45</span>,<span class="number">0x70</span>,<span class="number">0x5A</span>,<span class="number">0x2</span>,<span class="number">0x4</span>,<span class="number">0x0E</span>,<span class="number">0x4C</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">10</span>):</span><br><span class="line">	num[i]=num[i]^<span class="number">0xAD</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>,<span class="number">20</span>):</span><br><span class="line">	num[i]=num[i]^<span class="number">0xBE</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">20</span>,<span class="number">30</span>):</span><br><span class="line">	num[i]=num[i]^<span class="number">0xEF</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">30</span>,<span class="number">40</span>):</span><br><span class="line">	num[i]=num[i]^<span class="number">0xAB</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">40</span>,<span class="number">56</span>):</span><br><span class="line">	num[i]=num[i]^<span class="number">0xEF</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">56</span>):</span><br><span class="line">	num[i]=num[i]^<span class="number">0xDE</span></span><br><span class="line">	print(chr(num[i]),end=<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
-<p>运行得到flag:</p>
-<p>flag{I5_th1s_7he_PR1c3_I’M_PAyiNG_f0r_my_pA57_m1stAk35?}</p>
-<hr>
-<h2 id="WxyVM-2"><a href="#WxyVM-2" class="headerlink" title="WxyVM 2"></a>WxyVM 2</h2><h2 id="HomuraVM"><a href="#HomuraVM" class="headerlink" title="HomuraVM"></a>HomuraVM</h2><h2 id="480小时精通C"><a href="#480小时精通C" class="headerlink" title="480小时精通C++"></a>480小时精通C++</h2><h2 id="simple-machine"><a href="#simple-machine" class="headerlink" title="simple machine"></a>simple machine</h2><h2 id="Single"><a href="#Single" class="headerlink" title="Single"></a>Single</h2>
+        <p><img src="https://i.loli.net/2018/10/09/5bbc1033223c5.jpg" alt=""></p>
+        
+          <a class="article-more-a" href="/2018/10/06/南邮CTF-re-writeup/#more">More >></a>
+        
       
 
       
@@ -531,24 +398,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="CTF题目（bugku）"><a href="#CTF题目（bugku）" class="headerlink" title="CTF题目（bugku）"></a>CTF题目（bugku）</h2><h3 id="0x00-搜索"><a href="#0x00-搜索" class="headerlink" title="0x00 搜索"></a>0x00 搜索</h3><p><img src="https://i.loli.net/2018/09/10/5b961890e687c.jpg" alt="blob.jpg"> <a href="http://ctf.bugku.com/files/e0b57d15b3f8e6190e72987177da1ffd/key.pcapng" target="_blank" rel="noopener">题目下载地址</a></p>
-<blockquote>
-<p>非正常套路：用文本编辑器打开文件，CTRL+F搜索一波关键字，flag或者key等</p>
-</blockquote>
-<p><img src="https://i.loli.net/2018/09/10/5b961962b1c82.jpg" alt="blob.jpg"></p>
-<blockquote>
-<p>正常做法：wireshark分析</p>
-</blockquote>
-<ul>
-<li>直接搜索key、flag是找不到的，既然题目说flag被盗，那么就试试shell、pass、php、asp，post字符串查找等</li>
-</ul>
-<p><img src="https://i.loli.net/2018/09/10/5b961c097f9c4.jpg" alt="blob.jpg"></p>
-<ul>
-<li>找到可疑数据包，跟进最终TCP流，搜索一波</li>
-</ul>
-<p><img src="https://i.loli.net/2018/09/10/5b961c36a1cc7.jpg" alt="blob.jpg"> </p>
-<p>更新中……..</p>
-
+        <p><img src="https://i.loli.net/2018/10/09/5bbc0eb3d1f41.jpg" alt=""></p>
+        
+          <a class="article-more-a" href="/2018/10/01/几道题目了解Wireshark/#more">More >></a>
+        
       
 
       
@@ -621,32 +474,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h4><p>Binwalk是一个固件的分析工具，功能十分强大，本文只是提到了一点，更高级的用法还待挖掘中…… Kali linux 自带binwalk ，其他平台安装方法也很简单，这里不再说明</p>
-<h4 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h4><p>再终端输入 binwalk -h来查看一下binwalk的用法</p>
-<p> <img src="https://i.loli.net/2018/09/12/5b986794bfbfa.jpg" alt="blob.jpg"> <img src="https://i.loli.net/2018/09/12/5b9867c15318d.jpg" alt="blob.jpg"> </p>
-<p>在这里一共列举了六个模块： </p>
-<ol>
-<li><p>签名扫描选项 </p>
-</li>
-<li><p>提取选项 </p>
-</li>
-<li><p>熵分析选项</p>
-</li>
-<li><p>二进制 diffing选项 </p>
-</li>
-<li><p>原始压缩选项</p>
-</li>
-<li><p>常规选项</p>
-</li>
-</ol>
-<h4 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h4><p><strong>题目分析</strong> 例如下面的图片 </p>
-<p><img src="https://i.loli.net/2018/09/12/5b986e1aca37b.jpg" alt="blob.jpg"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@Kali:~/桌面# binwalk 123.jpg</span><br><span class="line"></span><br><span class="line">DECIMAL       HEXADECIMAL     DESCRIPTION</span><br><span class="line">--------------------------------------------------------------------------------</span><br><span class="line">0             0x0             JPEG image data, JFIF standard 1.01</span><br><span class="line">7549          0x1D7D          RAR archive data, first volume type: MAIN_HEAD</span><br></pre></td></tr></table></figure>
-<p>可以看到图片里头还有一个rar文件 然后使用binwalk把rar文件提取出来</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@Kali:~/桌面# binwalk -e 123.jpg</span><br><span class="line"></span><br><span class="line">DECIMAL       HEXADECIMAL     DESCRIPTION</span><br><span class="line">--------------------------------------------------------------------------------</span><br><span class="line">0             0x0             JPEG image data, JFIF standard 1.01</span><br><span class="line">7549          0x1D7D          RAR archive data, first volume type: MAIN_HEAD</span><br></pre></td></tr></table></figure>
-<p>然后就可以得到提取出来的文件了</p>
-<p> <img src="https://i.loli.net/2018/09/12/5b986e52b676d.jpg" alt="blob.jpg"></p>
-
+        <p><img src="https://i.loli.net/2018/10/09/5bbc0c549eeac.png" alt=""></p>
+        
+          <a class="article-more-a" href="/2018/10/01/binwalk简单说明/#more">More >></a>
+        
       
 
       
@@ -719,142 +550,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://man.linuxde.net" target="_blank" rel="noopener">linux命令大全</a></p>
-<h2 id="Part-one"><a href="#Part-one" class="headerlink" title="Part one"></a>Part one</h2><blockquote>
-<p>bandit1：boJ9jbbUNNfktd78OOpsqOltutMc3MY1 </p>
-<p>bandit2：CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9 (虚文件名) </p>
-<p>bandit3：UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK (文件名中含有空格) </p>
-<p>bandit4：pIwrPrtPN36QITSp3EQaw936yaFoFgAB (隐藏文件)</p>
-<p>bandit5：koReBOKuIDDepwhWk7jZC0RTdopnAYKh （可读文件）</p>
-<p>bandit6：DXjZPULLxYr17uwoI01bNLQbtFemEgo7 (读取文件大小)</p>
-<p>bandit7：HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs （user和group）</p>
-<p>bandit8：cvX2JJa4CFALtqS87jk27qwqGhBM9plV （grep 命令查找）</p>
-<p>bandit9：UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR （sort命令和uniq）</p>
-<p>bandit10：truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk（strings命令和grqp命令）</p>
-<p>bandit11：IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR （base64命令）</p>
-<p>bandit12：5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu （tr命令)</p>
-<p>bandit13：8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL （gzip,tar,xxd,zcat,bzip2,file,cp,mv,mkdir命令) </p>
-<p>bandit14：4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e （ssh命令）</p>
-<p>bandit15：BfMYroe26WYalil77FoDi9qh59eK5xNr （telnet命令）</p>
-<p>bandit16：cluFn7wTiGryunymYOu4RcffSxQluehd （openssl命令, s_client）</p>
-</blockquote>
-<hr>
-<h3 id="虚文件名"><a href="#虚文件名" class="headerlink" title="虚文件名"></a>虚文件名</h3><p>在bash中，“-”即短杠会被解析为stdin，也就是标准输入流 cat - 这条命令会等待你从终端输入字符，然后回显你输入的任何字符，直到输入eof (Ctrl-D)为止。如何摆脱bash的转义呢？ cat ./- 在linux中“.”表示当前目录，紧跟其后的短杆就不会被解析为stdin了。于是就顺利读出了下一个等级的密码。 这种方法有很多误解，因为使用-作为参数引用STDIN / STDOUT即dev/stdin或dev / stdout。所以如果要打开这种类型的文件，你必须指定文件的完整位置，如as ./-。例如。，如果你想查看该文件中的内容，请使用cat ./-</p>
-<hr>
-<h3 id="文件名中的空格"><a href="#文件名中的空格" class="headerlink" title="文件名中的空格"></a>文件名中的空格</h3><p>如何在终端的文件名中键入空格呢？ 答：在空格之前添加反斜杠 所以如果一个文件名中含有空格的话怎么读取文件内容呢？ 例如文件名为： spaces in this filename 方法一：cat “spaces in this filename” 方法二：cat spaces\ in\ this\ filename（反斜杠转义）</p>
-<hr>
-<h3 id="隐藏文件"><a href="#隐藏文件" class="headerlink" title="隐藏文件"></a>隐藏文件</h3><p>在linux中隐藏文件和文件夹比如将目录readme隐藏 <strong>mv readme .readme</strong> (重命名) 还可在建立文件的时候直接以 . 开头 而在linux中显示文件的命令 ls -a  (显示所有文件，包括隐藏文件） ll -a （显示当前目录所有文件、文件夹的详细信息，包括权限、大小、用户、组等） ls -d .*（只显示隐藏文件）</p>
-<hr>
-<h3 id="查找文件大小"><a href="#查找文件大小" class="headerlink" title="查找文件大小"></a>查找文件大小</h3><p>find .-type f -size 1033c</p>
-<blockquote>
-<p>‘.’ 查找当前目录及子目录 “-type f” 指定文件类型为普通文件 “-size 1033c”指定文件大小为1033byte</p>
-</blockquote>
-<hr>
-<h3 id="user和group"><a href="#user和group" class="headerlink" title="user和group"></a>user和group</h3><p><strong>find /-user ‘bandit7’ -group ‘bandit6’ -size 33c</strong></p>
-<blockquote>
-<p>指定文件所属的用户组和用户 “/“表示从根目录开始查找，后面三个参数就是用户，用户组，文件大小</p>
-</blockquote>
-<p>这里有一个问题就是find查找的时候会有很多Permission denied的ji结果，怎么过滤掉呢？ 使用:grep -v “Permission denied” 并没有效果 于是可以使用： find / -user “bandit7” -group “bandit6” -size 33c 2&gt;/dev/null 把错误信息写入黑洞文件（dev/null） 0表示标准输入， 1表示标准输出， 2表示标准错误 <a href="https://www.cnblogs.com/lishihai/p/7986565.html" target="_blank" rel="noopener">dev/null dev/zero</a></p>
-<hr>
-<h3 id="grep命令"><a href="#grep命令" class="headerlink" title="grep命令"></a>grep命令</h3><p><a href="http://man.linuxde.net" target="_blank" rel="noopener">grep命令1</a> </p>
-<p><a href="http://www.runoob.com/linux/linux-tutorial.html" target="_blank" rel="noopener">grep命令2</a></p>
-<hr>
-<h3 id="sort和uniq"><a href="#sort和uniq" class="headerlink" title="sort和uniq"></a>sort和uniq</h3><p>sort命令是在Linux里非常有用，它将文件进行排序，并将排序结果标准输出。sort命令既可以从特定的文件，也可以从stdin中获取输入 uniq命令用于报告或忽略文件中的重复行，一般与sort命令结合使用</p>
-<blockquote>
-<p>删除重重复行</p>
-</blockquote>
-<p><strong>uniq file.txt sort file.txt | uniq sort -u file.txt</strong></p>
-<blockquote>
-<p>只显示单一行</p>
-</blockquote>
-<p><strong>uniq -u file.txt sort file.txt | uniq -u</strong> 更多内容请访问上方提到的网站</p>
-<hr>
-<h3 id="strings命令"><a href="#strings命令" class="headerlink" title="strings命令"></a>strings命令</h3><p>strings命令在对象文件或二进制文件中查找可打印的字符串。字符串是4个或更多可打印字符的任意序列，以换行符或空字符结束。 strings命令对识别随机对象文件很有用 strings data.txt | grqp -s “==”</p>
-<hr>
-<h3 id="base64命令"><a href="#base64命令" class="headerlink" title="base64命令"></a>base64命令</h3><p>用法：base64 [选项] [文件] 使用 base64 编码/解码文件或标准输入输出。 -d, —decode 解码数据 -i, —ignore-garbag 解码时忽略非字母字符 -w, —wrap=字符数 在指定的字符数后自动换行(默认为76)，0 为禁用自动换行 echo test|base64 #加密(dGVzdAo=) echo dGVzdAo= |base64 -d #解密(test) <a href="http://soft.chinabyte.com/247/8817247.shtml" target="_blank" rel="noopener">base64命令</a></p>
-<hr>
-<h3 id="tr命令"><a href="#tr命令" class="headerlink" title="tr命令"></a>tr命令</h3><p>cat data.txt|tr a-zA-Z n-za-mN-ZA-M 就是a-z对应换成n-z a-m 大写亦然 rot13也可以在线解密 tr命令可以对来自标准输入的字符进行替换、压缩和删除。它可以将一组字符变成另一组字符，经常用来编写优美的单行命令，作用很强大 -c或——complerment：取代所有不属于第一字符集的字符； -d或——delete：删除所有属于第一字符集的字符； -s或—squeeze-repeats：把连续重复的字符以单独一个字符表示； -t或—truncate-set1：先删除第一字符集较第二字符集多出的字符</p>
-<hr>
-<h3 id="gzip命令"><a href="#gzip命令" class="headerlink" title="gzip命令"></a>gzip命令</h3><p>gzip命令用来压缩文件。gzip是个使用广泛的压缩程序，文件经它压缩过后，其名称后面会多处“.gz”扩展名。 gzip是在Linux系统中经常使用的一个对文件进行压缩和解压缩的命令，既方便又好用。gzip不仅可以用来压缩大的、较少使用的文件以节省磁盘空间，还可以和tar命令一起构成Linux操作系统中比较流行的压缩文件格式。据统计，gzip命令对文本文件有60%～70%的压缩率。减少文件大小有两个明显的好处，一是可以减少存储空间，二是通过网络传输文件时，可以减少传输的时间</p>
-<p> <a href="http://man.linuxde.net/gzip" target="_blank" rel="noopener">gzip命令1</a> </p>
-<p><a href="http://www.runoob.com/linux/linux-comm-gzip.html" target="_blank" rel="noopener">gzip命令2</a></p>
-<hr>
-<h3 id="xxd命令"><a href="#xxd命令" class="headerlink" title="xxd命令"></a>xxd命令</h3><p>命令名称 　　xxd - 做一次十六进制的输出或者反操作 xxd命令语法 　　xxd [options] [infile [outfile]] 　　xxd -r[evert] [options] [infile [outfile]] xxd命令描述 　　xxd命令为给定的标准输入或者文件做一次十六进制的输出，它也可以将十六进制输出转换为原来的二进制格式。</p>
-<p> <strong>xxd命令常用选项</strong>　　</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-b</td>
-<td>用二进制显示一个bit，而不是十六进制</td>
-</tr>
-<tr>
-<td>-r</td>
-<td>以十六进制作为输入，二进制作为输出</td>
-</tr>
-<tr>
-<td>-s [+][-]seek</td>
-<td>从字节开始。+ -分别表示相对于文件的开头和结尾</td>
-</tr>
-<tr>
-<td>-seek offset</td>
-<td>从offset数值开始显示</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h3 id="tar命令"><a href="#tar命令" class="headerlink" title="tar命令"></a>tar命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tar –xvf file.tar ..........解压 tar包 </span><br><span class="line">tar -xzvf file.tar.gz ......解压tar.gz </span><br><span class="line">tar -xjvf file.tar.bz2 .....解压 tar.bz2 </span><br><span class="line">tar –xZvf file.tar.Z .......解压tar.Z </span><br><span class="line">unrar e file.rar ...........解压rar </span><br><span class="line">unzip file.zip .............解压zip</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.cnblogs.com/newcaoguo/p/5896975.html" target="_blank" rel="noopener">tar命令</a></p>
-<hr>
-<h3 id="tmp文件夹"><a href="#tmp文件夹" class="headerlink" title="tmp文件夹"></a>tmp文件夹</h3><p>关于linux下tmp文件夹，正如tmp temporary file 临时文件夹</p>
-<p> <a href="https://shazi.info/" target="_blank" rel="noopener">tmp文件夹</a></p>
-<hr>
-<h3 id="zcat命令"><a href="#zcat命令" class="headerlink" title="zcat命令"></a>zcat命令</h3><p>zcat命令用于不真正解压缩文件，就能显示压缩包中文件的内容的场合 </p>
-<p>-S：指定gzip格式的压缩包的后缀。当后缀不是标准压缩包后缀时使用此选项；</p>
-<p>-c：将文件内容写到标注输出； </p>
-<p>-d：执行解压缩操作；</p>
-<p>-l：显示压缩包中文件的列表； </p>
-<p>-L：显示软件许可信息； </p>
-<p>-q：禁用警告信息； </p>
-<p>-r：在目录上执行递归操作； </p>
-<p>-t：测试压缩文件的完整性；</p>
-<p>-V：显示指令的版本信息；</p>
-<p>-l：更快的压缩速度；</p>
-<p>-9：更高的压缩比</p>
-<hr>
-<h3 id="Linux重定向"><a href="#Linux重定向" class="headerlink" title="Linux重定向"></a>Linux重定向</h3><p><a href="https://blog.csdn.net/qq_35242986/article/details/73772212" target="_blank" rel="noopener">linux重定向</a></p>
-<hr>
-<h3 id="POSIX-tar-archive"><a href="#POSIX-tar-archive" class="headerlink" title="POSIX tar archive"></a>POSIX tar archive</h3><p><a href="https://blog.csdn.net/lindamtd/article/details/78575826" target="_blank" rel="noopener">参考说明</a></p>
-<hr>
-<h3 id="ssh命令"><a href="#ssh命令" class="headerlink" title="ssh命令"></a>ssh命令</h3><p>用 ssh -i keyfile user@host 访问linux主机 <a href="http://www.talkwithtrend.com/Article/30463" target="_blank" rel="noopener">ssh说明1</a> <a href="https://blog.csdn.net/u010705209/article/details/79090670" target="_blank" rel="noopener">ssh说明2</a></p>
-<hr>
-<h3 id="echo命令"><a href="#echo命令" class="headerlink" title="echo命令"></a>echo命令</h3><p>echo命令用于在shell中打印shell变量的值，或者直接输出指定的字符串 </p>
-<p>-n：输出时，不在行尾添加换行符； </p>
-<p>-e：使反斜杠的转义功能生效；</p>
-<p>-E：禁用反斜杠的转义功能，为默认选项； </p>
-<p>—help：显示帮助信息； </p>
-<p>—version：显示版本信息；</p>
-<p> <a href="https://blog.csdn.net/K346K346/article/details/78598376" target="_blank" rel="noopener">echo命令</a></p>
-<hr>
-<h3 id="telnet-命令"><a href="#telnet-命令" class="headerlink" title="telnet 命令"></a>telnet 命令</h3><p>telnet命令用于登录远程主机，对远程主机进行管理。telnet因为采用明文传送报文，安全性不好，很多Linux服务器都不开放telnet服务，而改用更安全的ssh方式了。但仍然有很多别的系统可能采用了telnet方式来提供远程登录，因此弄清楚telnet客户端的使用方式仍是很有必要的 明文传输 telnet(选项)(参数)</p>
-<p> <a href="http://man.linuxde.net/telnet" target="_blank" rel="noopener">telnet说明</a></p>
-<hr>
-<h3 id="openssl命令"><a href="#openssl命令" class="headerlink" title="openssl命令"></a>openssl命令</h3><p>OpenSSL是一个强大的安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及SSL协议，并提供丰富的应用程序供测试或其它目的使用。在OpenSSL被曝出现严重安全漏洞后，发现多数通过SSL协议加密的网站使用名为OpenSSL的开源软件包。由于这是互联网应用最广泛的安全传输方法，被网银、在线支付、电商网站、门户网站、电子邮件等重要网站广泛使用，所以该漏洞影响范围广大。 OpenSSL有两种运行模式：交互模式和批处理模式。 直接输入openssl回车进入交互模式，输入带命令选项的openssl进入批处理模式。 OpenSSL整个软件包大概可以分成三个主要的功能部分：密码算法库、SSL协议库以及应用程序。OpenSSL的目录结构自然也是围绕这三个功能部分进行规划的 </p>
-<p><a href="http://man.linuxde.net/openssl" target="_blank" rel="noopener">Openssl说明1</a> </p>
-<p><a href="http://www.mamicode.com/info-detail-910765.html" target="_blank" rel="noopener">Openssl说明2</a></p>
-<hr>
-<h3 id="s-client"><a href="#s-client" class="headerlink" title="s_client"></a>s_client</h3><p>其中的s_client模块可以帮助我们作为客户端与ssl服务器进行交互。 </p>
-<p>**openssl s_client -connect localhost:30001 -quiet -quiet</p>
-<p>用以关闭session和证书的信息，同时打开-ign_eof这个选项。前者可简化显示的界面，后者则保证在输入完成后不是立即断开连接，否则无法看到回显的下一个等级的密码。</p>
-<hr>
-
+        <p>[<img src="https://i.loli.net/2018/10/09/5bbc0dfb934dc.jpg" alt=""></p>
+        
+          <a class="article-more-a" href="/2018/10/01/Over-the-Wire-Bandiit闯关/#more">More >></a>
+        
       
 
       
@@ -927,44 +626,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>需要准备LAMP环境，（apache，php，mysql）</p>
-</blockquote>
-<h5 id="1、安装apache2"><a href="#1、安装apache2" class="headerlink" title="1、安装apache2"></a><strong>1、安装apache2</strong></h5><p>(如果已经安装好的可以跳过，当然再次执行此命令也不会重复安装的）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apache2 -y</span><br></pre></td></tr></table></figure>
-<h5 id="2、安装-PHP-组件"><a href="#2、安装-PHP-组件" class="headerlink" title="2、安装 PHP 组件"></a><strong>2、安装 PHP 组件</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.0 -y</span><br><span class="line">sudo apt-get install libapache2-mod-php7.0</span><br></pre></td></tr></table></figure>
-<p><strong>3、重启 Apache 服务：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/apache2 restart</span><br></pre></td></tr></table></figure>
-<h5 id="4、安装-MySQL-服务"><a href="#4、安装-MySQL-服务" class="headerlink" title="4、安装 MySQL 服务"></a><strong>4、安装 MySQL 服务</strong></h5><p>这个过程需要你设定密码，要能够记得住的，后面也会用到</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server -y</span><br></pre></td></tr></table></figure>
-<p>安装 php MySQL 相关组件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.0-mysql</span><br></pre></td></tr></table></figure>
-<p>重启 MySQL 服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysql restart</span><br></pre></td></tr></table></figure>
-<h5 id="5、安装-phpmyadmin"><a href="#5、安装-phpmyadmin" class="headerlink" title="5、安装 phpmyadmin"></a><strong>5、安装 phpmyadmin</strong></h5><p>使用<code>apt-get</code>安装 phpmyadmin，安装过程中，需要根据提示选择 apache2 ，回车就可以了，再根据提示输入数据库密码和服务器登陆密码。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install phpmyadmin -y</span><br></pre></td></tr></table></figure>
-<h5 id="6、安装并配置-Discuz"><a href="#6、安装并配置-Discuz" class="headerlink" title="6、安装并配置 Discuz"></a><strong>6、安装并配置 Discuz</strong></h5><p>通过wget命令下载一个安装包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo wget &apos;http://download.comsenz.com/DiscuzX/3.3/Discuz_X3.3_SC_UTF8.zip&apos;</span><br></pre></td></tr></table></figure>
-<p>为了将压缩包解压，需要安装一个 unzip</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install unzip</span><br></pre></td></tr></table></figure>
-<p>下载完成后，解压这个压缩包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo unzip Discuz_X3.3_SC_UTF8.zip</span><br></pre></td></tr></table></figure>
-<p>解压完后，就能在<em>upload</em>文件夹里看到discuz的源码了</p>
-<blockquote>
-<p>也可以到 Discuz 官网找一个安装包并复制安装包下载路径，这里我用的是 Discuz_X3.3_SC_UTF8.zip</p>
-</blockquote>
-<h5 id="7、配置-Discuz"><a href="#7、配置-Discuz" class="headerlink" title="7、配置 Discuz"></a><strong>7、配置 Discuz</strong></h5><p>由于 PHP 默认访问<code>/var/www/html/</code>文件夹，所以需要把 upload 文件夹里的文件都复制到<code>/var/www/html/</code>文件夹</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv upload/* /var/www/html/</span><br></pre></td></tr></table></figure>
-<p>将目录切换到 php 访问的文件夹下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /var/www/html/</span><br></pre></td></tr></table></figure>
-<p>修改一下<code>config</code>、<code>data</code>、<code>uc_server/data/</code>、<code>uc_client/data/cache</code>目录权限为777</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod -R 777 config/ data/ uc_server/data/ uc_client/data/cache/</span><br></pre></td></tr></table></figure>
-<p>将 apache 指定到 index.html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /var/www/html/index.html /var/www/html/index~.html</span><br></pre></td></tr></table></figure>
-<p>重启 Apache 服务：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/apache2 restart</span><br></pre></td></tr></table></figure>
-<p><strong>基本结束</strong> <strong>在浏览器中输入你的IP就可以进行后续步骤了</strong></p>
-
+        <p><img src="https://i.loli.net/2018/10/09/5bbc0e66cfb58.png" alt=""></p>
+        
+          <a class="article-more-a" href="/2018/10/01/搭建Discuz论坛/#more">More >></a>
+        
       
 
       
@@ -1122,49 +787,10 @@
 <p>一直认为泛而不精不该是学习应该持有的态度，知道的再多却终究到不出个所以然，和不知道又有多大的区别。专注自己兴趣所在，精力所能达到的方向，努力即可，共勉之。</p>
 </blockquote>
 <hr>
-<h3 id="CTF练习平台"><a href="#CTF练习平台" class="headerlink" title="CTF练习平台"></a>CTF练习平台</h3><p><a href="http://hackinglab.cn/" target="_blank" rel="noopener">网络信息安全攻防学习平台</a></p>
-<p><a href="http://ctf.bugku.com/" target="_blank" rel="noopener">bugku</a></p>
-<p><a href="https://www.jarvisoj.com" target="_blank" rel="noopener">Jarvis OJ</a></p>
-<p><a href="http://captf.com/" target="_blank" rel="noopener"> ctf题目收集</a></p>
-<p><a href="http://oj.xctf.org.cn/" target="_blank" rel="noopener">XCTF实训平台</a></p>
-<p><a href="http://www.baimaoxueyuan.com" target="_blank" rel="noopener">白帽学院c</a> </p>
-<p><a href="https://www.ichunqiu.com/competition" target="_blank" rel="noopener">i春秋竞赛训练营</a> </p>
-<p><a href="http://www.hetianlab.com/CTFrace.html" target="_blank" rel="noopener">合天网安</a></p>
-<p><a href="http://www.shiyanbar.com/ctf/" target="_blank" rel="noopener">实验吧</a></p>
-<p><a href="https://cgctf.nuptsast.com" target="_blank" rel="noopener">南京邮电大学CTF平台</a></p>
-<p><a href="https://www.linkedbyx.com" target="_blank" rel="noopener">安恒CTF月赛</a></p>
-<h3 id="XSS挑战"><a href="#XSS挑战" class="headerlink" title="XSS挑战"></a>XSS挑战</h3><p><a href="http://xss-quiz.int21h.jp/" target="_blank" rel="noopener">http://xss-quiz.int21h.jp/</a></p>
-<p><a href="https://alf.nu/" target="_blank" rel="noopener">https://alf.nu/</a></p>
-<p><a href="http://prompt.ml/" target="_blank" rel="noopener">http://prompt.ml/</a></p>
-<h3 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h3><p><a href="http://redtiger.labs.overthewire.org/" target="_blank" rel="noopener">http://redtiger.labs.overthewire.org/</a></p>
-<p><a href="https://github.com/Audi-1/sqli-labs" target="_blank" rel="noopener">https://github.com/Audi-1/sqli-labs</a></p>
-<h3 id="CTF-PWN-amp-RE系列"><a href="#CTF-PWN-amp-RE系列" class="headerlink" title="CTF PWN &amp; RE系列"></a>CTF PWN &amp; RE系列</h3><p><a href="http://reversing.kr/" target="_blank" rel="noopener">http://reversing.kr/</a></p>
-<p><a href="http://pwnable.kr/" target="_blank" rel="noopener">http://pwnable.kr/</a></p>
-<p><a href="https://pwnable.tw/" target="_blank" rel="noopener">https://pwnable.tw/</a></p>
-<p><a href="http://liveoverflow.com/" target="_blank" rel="noopener">http://liveoverflow.com/</a></p>
-<h3 id="CTF游戏"><a href="#CTF游戏" class="headerlink" title="CTF游戏"></a>CTF游戏</h3><p><a href="http://monyer.com/game/game1/" target="_blank" rel="noopener">梦之光芒的小游戏</a></p>
-<p><a href="http://hkyx.myhack58.com/" target="_blank" rel="noopener">红客闯关游戏</a></p>
-<p><a href="http://overthewire.org/wargames/" target="_blank" rel="noopener">Over The Wire</a></p>
-<p><a href="https://www.root-me.org/?lang=en" target="_blank" rel="noopener">ROOT ME</a></p>
-<p><a href="http://www.wechall.net/" target="_blank" rel="noopener">We Call</a></p>
-<p><a href="wargame.kr">wargame.kr</a></p>
-<p><a href="http://webhacking.kr/" target="_blank" rel="noopener">Web hacking</a></p>
-<p><a href="https://backdoor.sdslabs.co/" target="_blank" rel="noopener">backdoor</a></p>
-<p><a href="https://ringzer0team.com/" target="_blank" rel="noopener">Ring Zer0</a></p>
-<p><a href="http://fun.coolshell.cn/" target="_blank" rel="noopener">CoolShell puzzle game</a></p>
-<p><a href="http://smashthestack.org/" target="_blank" rel="noopener">smashthestack</a></p>
-<p><a href="https://microcorruption.com/login" target="_blank" rel="noopener">Embedded Security CTF</a></p>
-<p><a href="http://solveme.peng.kr/chall/p/1" target="_blank" rel="noopener">Solve me</a></p>
-<h3 id="靶场"><a href="#靶场" class="headerlink" title="靶场"></a>靶场</h3><p><a href="http://www.dvwa.co.uk/index.php" target="_blank" rel="noopener">DVWA</a></p>
-<p><a href="https://vulhub.org/#/docs/" target="_blank" rel="noopener">Vulhub</a></p>
-<p><a href="https://hack.zkaq.org/?a=battle" target="_blank" rel="noopener">掌控安全在线演练靶场</a></p>
-<p><a href="https://pan.baidu.com/s/1vSX0nF4TODRhwio7wCx3sA" target="_blank" rel="noopener">webug</a></p>
-<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p><a href="http://www.tasfa.cn/index.php/2016/01/29/ctf-tools-2/" target="_blank" rel="noopener">CTF的瑞士军刀</a></p>
-<p><a href="https://www.ctftools.com/down/" target="_blank" rel="noopener">CTFtoos</a></p>
-<p><a href="http://ctf.ssleye.com/" target="_blank" rel="noopener">在线工具</a></p>
-<h3 id="Writeup"><a href="#Writeup" class="headerlink" title="Writeup"></a>Writeup</h3><p><a href="https://github.com/ctfs/" target="_blank" rel="noopener">CTFs</a></p>
-<p><a href="https://ctf-wiki.github.io/ctf-wiki/" target="_blank" rel="noopener">CTF Wiki</a></p>
-
+<p><img src="https://i.loli.net/2018/10/09/5bbc0cba2efbd.jpg" alt=""></p>
+        
+          <a class="article-more-a" href="/2018/10/01/CTF资源整理/#more">More >></a>
+        
       
 
       
@@ -1217,19 +843,19 @@
 
 
   
-    <article id="post-利用wordpress搭建博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-课堂上的《图片隐写学习》" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/29/利用wordpress搭建博客/">利用wordpress搭建博客</a>
+      <a class="article-title" href="/2018/09/29/课堂上的《图片隐写学习》/">课堂上的《图片隐写学习》</a>
     </h1>
   
 
         
-        <a href="/2018/09/29/利用wordpress搭建博客/" class="archive-article-date">
+        <a href="/2018/09/29/课堂上的《图片隐写学习》/" class="archive-article-date">
   	<time datetime="2018-09-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-29</time>
 </a>
         
@@ -1237,54 +863,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="1、准备LAMP环境"><a href="#1、准备LAMP环境" class="headerlink" title="1、准备LAMP环境"></a>1、准备LAMP环境</h5><p>安装Apache2 在终端输入如下命令来安装apache2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apache2 -y</span><br></pre></td></tr></table></figure>
-<h5 id="2-、安装PHP组件"><a href="#2-、安装PHP组件" class="headerlink" title="2 、安装PHP组件"></a>2 、安装PHP组件</h5><p>分别输入下述两条命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.0 -y</span><br><span class="line">sudo apt-get install libapache2-mod-php7.0</span><br></pre></td></tr></table></figure>
-<h5 id="3、安装MySQL服务"><a href="#3、安装MySQL服务" class="headerlink" title="3、安装MySQL服务"></a>3、安装MySQL服务</h5><p>这个过程中会提示设置MySQL的密码，需要连续输入两次，密码需要记住 输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server -y</span><br></pre></td></tr></table></figure>
-<p>安装php MySQL相关组件 输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.0-mysql</span><br></pre></td></tr></table></figure>
-<p>安装phpmyadmin 在这一过程会提示选择Apache2,按回车就行，然后依次输入你的服务器登录的密码和刚才设置的MySQL数据库的密码 依次输入下面两条命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install phpmyadmin -y</span><br><span class="line">sudo ln -s /usr/share/phpmyadmin/var/www/html/phpmyadmin</span><br></pre></td></tr></table></figure>
-<p>重启MySQL服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysql restart</span><br></pre></td></tr></table></figure>
-<p>重启Apache服务：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart apache2.service</span><br></pre></td></tr></table></figure>
-<h5 id="4、安装并且配置wordpress"><a href="#4、安装并且配置wordpress" class="headerlink" title="4、安装并且配置wordpress"></a>4、安装并且配置wordpress</h5><p>4.1、安装Wordpress压缩包，可以到<a href="https://cn.wordpress.org" target="_blank" rel="noopener">官网</a>复制最新的压缩包的下载连接，记得下载的是zip格式的文件，利用wget命令来下载，这里给出的是目前最新的版本（时间是2018.6.25） 输入如下命令：（默认下载到当前目录，可以通过 ls 命令查看）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo wget https://cn.wordpress.org/wordpress-4.9.4-zh_CN.zip</span><br></pre></td></tr></table></figure>
-<p>输入命令：（接下后再次通过 ls 查看发现会多了Wordpress的文件）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo unzip wordpress-4.9.4-zh_CN.zip</span><br></pre></td></tr></table></figure>
-<p>解压不了可能是unzip没有下载，通过apt-get 命令下载unzip后在解压</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install unzip</span><br></pre></td></tr></table></figure>
-<p>为wordpress配置一个数据库（在这一部分的内容要记住，因为后面进入Wordpress的时候需要） 输入下列代码，然后输入你的MySQL密码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-<p>为wordpress创建一个名为wordpress的数据库（等会登陆的时候需要你输入数据库的名字）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE wordpress;</span><br></pre></td></tr></table></figure>
-<p>为这个数据库设置一个用户名为wordpress_user</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER wordpress_user;</span><br></pre></td></tr></table></figure>
-<p>为这个用户设置一个用户密码为password(可以自己更改能记住的密码，然后后面的也都要改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD FOR wordpress_user= PASSWORD(&quot;password123&quot;);</span><br></pre></td></tr></table></figure>
-<p>为这个用户配置数据库的访问权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON wordpress.* TO wordpress_user IDENTIFIED BY&quot;password123&quot;;</span><br></pre></td></tr></table></figure>
-<p>生效这些配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
-<p>然后退出MySQL</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit;</span><br></pre></td></tr></table></figure>
-<p>配置Wordpress 依次地输入下面的代码： 因为php默认访问<code>/var/www/html/</code> 把刚刚安装的wordpress复制到<code>/var/www/html/``下面</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv wordpress/* /var/www/html/</span><br></pre></td></tr></table></figure>
-<p>然后可以删除输入下面的命令删除原本的wordpress(强迫症的原因)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf wordpress</span><br></pre></td></tr></table></figure>
-<p>设置权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod -R 777 /var/www/html/</span><br></pre></td></tr></table></figure>
-<p>将 apache 指定到 index.html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /var/www/html/index.html /var/www/html/index~.html</span><br></pre></td></tr></table></figure>
-<p>重启apache2服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart apache2.service</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>到这里基本结束，然后在浏览器中输入你的域名 激活安装wordpress就行，数据库的信息就是刚刚设置的信息</p>
-</blockquote>
-
+        <p><img src="https://i.loli.net/2018/10/09/5bbc0f29d82c5.jpg" alt=""></p>
+        
+          <a class="article-more-a" href="/2018/09/29/课堂上的《图片隐写学习》/#more">More >></a>
+        
       
 
       
@@ -1297,7 +879,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">环境配置</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CTF</a>
         		</li>
       		
 		</ul>
@@ -1307,7 +889,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/29/利用wordpress搭建博客/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/09/29/课堂上的《图片隐写学习》/">展开全文 >></a>
         </p>
       
 
@@ -1351,7 +933,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 yoloyanng
+    		&copy; 2018 Ithaca
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1471,15 +1053,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Tools</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">环境配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
