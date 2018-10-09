@@ -19,7 +19,7 @@
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/assets/img/favicon.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -43,7 +43,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/assets/img/Misaka.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Ithaca</a></h1>
@@ -55,7 +55,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">相册</a></li>
+				<li><a href="/photo">相册</a></li>
 	        
 			</ul>
 		</nav>
@@ -65,6 +65,8 @@
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
             
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">true</a>
     			
             
     			
@@ -77,11 +79,7 @@
 				
 					<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
 					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 					<a class="mail" target="_blank" href="/yoloyanng@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -101,7 +99,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/assets/img/Misaka.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Ithaca</h1>
@@ -120,11 +118,7 @@
 					
 						<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="mail" target="_blank" href="/yoloyanng@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -137,7 +131,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">相册</a></li>
+					<li style="width: 50%"><a href="/photo">相册</a></li>
 		        
 				</ul>
 			</nav>
@@ -1252,19 +1246,19 @@
 
 
   
-    <article id="post-利用wordpress搭建博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Vmware安装Mac过程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/29/利用wordpress搭建博客/">利用wordpress搭建博客</a>
+      <a class="article-title" href="/2018/09/29/Vmware安装Mac过程/">Vmware安装Mac过程</a>
     </h1>
   
 
         
-        <a href="/2018/09/29/利用wordpress搭建博客/" class="archive-article-date">
+        <a href="/2018/09/29/Vmware安装Mac过程/" class="archive-article-date">
   	<time datetime="2018-09-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-29</time>
 </a>
         
@@ -1272,53 +1266,74 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="1、准备LAMP环境"><a href="#1、准备LAMP环境" class="headerlink" title="1、准备LAMP环境"></a>1、准备LAMP环境</h5><p>安装Apache2 在终端输入如下命令来安装apache2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apache2 -y</span><br></pre></td></tr></table></figure>
-<h5 id="2-、安装PHP组件"><a href="#2-、安装PHP组件" class="headerlink" title="2 、安装PHP组件"></a>2 、安装PHP组件</h5><p>分别输入下述两条命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.0 -y</span><br><span class="line">sudo apt-get install libapache2-mod-php7.0</span><br></pre></td></tr></table></figure>
-<h5 id="3、安装MySQL服务"><a href="#3、安装MySQL服务" class="headerlink" title="3、安装MySQL服务"></a>3、安装MySQL服务</h5><p>这个过程中会提示设置MySQL的密码，需要连续输入两次，密码需要记住 输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server -y</span><br></pre></td></tr></table></figure>
-<p>安装php MySQL相关组件 输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.0-mysql</span><br></pre></td></tr></table></figure>
-<p>安装phpmyadmin 在这一过程会提示选择Apache2,按回车就行，然后依次输入你的服务器登录的密码和刚才设置的MySQL数据库的密码 依次输入下面两条命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install phpmyadmin -y</span><br><span class="line">sudo ln -s /usr/share/phpmyadmin/var/www/html/phpmyadmin</span><br></pre></td></tr></table></figure>
-<p>重启MySQL服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysql restart</span><br></pre></td></tr></table></figure>
-<p>重启Apache服务：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart apache2.service</span><br></pre></td></tr></table></figure>
-<h5 id="4、安装并且配置wordpress"><a href="#4、安装并且配置wordpress" class="headerlink" title="4、安装并且配置wordpress"></a>4、安装并且配置wordpress</h5><p>4.1、安装Wordpress压缩包，可以到<a href="https://cn.wordpress.org" target="_blank" rel="noopener">官网</a>复制最新的压缩包的下载连接，记得下载的是zip格式的文件，利用wget命令来下载，这里给出的是目前最新的版本（时间是2018.6.25） 输入如下命令：（默认下载到当前目录，可以通过 ls 命令查看）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo wget https://cn.wordpress.org/wordpress-4.9.4-zh_CN.zip</span><br></pre></td></tr></table></figure>
-<p>输入命令：（接下后再次通过 ls 查看发现会多了Wordpress的文件）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo unzip wordpress-4.9.4-zh_CN.zip</span><br></pre></td></tr></table></figure>
-<p>解压不了可能是unzip没有下载，通过apt-get 命令下载unzip后在解压</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install unzip</span><br></pre></td></tr></table></figure>
-<p>为wordpress配置一个数据库（在这一部分的内容要记住，因为后面进入Wordpress的时候需要） 输入下列代码，然后输入你的MySQL密码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-<p>为wordpress创建一个名为wordpress的数据库（等会登陆的时候需要你输入数据库的名字）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE wordpress;</span><br></pre></td></tr></table></figure>
-<p>为这个数据库设置一个用户名为wordpress_user</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER wordpress_user;</span><br></pre></td></tr></table></figure>
-<p>为这个用户设置一个用户密码为password(可以自己更改能记住的密码，然后后面的也都要改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD FOR wordpress_user= PASSWORD(&quot;password123&quot;);</span><br></pre></td></tr></table></figure>
-<p>为这个用户配置数据库的访问权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON wordpress.* TO wordpress_user IDENTIFIED BY&quot;password123&quot;;</span><br></pre></td></tr></table></figure>
-<p>生效这些配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
-<p>然后退出MySQL</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit;</span><br></pre></td></tr></table></figure>
-<p>配置Wordpress 依次地输入下面的代码： 因为php默认访问<code>/var/www/html/</code> 把刚刚安装的wordpress复制到<code>/var/www/html/``下面</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv wordpress/* /var/www/html/</span><br></pre></td></tr></table></figure>
-<p>然后可以删除输入下面的命令删除原本的wordpress(强迫症的原因)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf wordpress</span><br></pre></td></tr></table></figure>
-<p>设置权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod -R 777 /var/www/html/</span><br></pre></td></tr></table></figure>
-<p>将 apache 指定到 index.html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /var/www/html/index.html /var/www/html/index~.html</span><br></pre></td></tr></table></figure>
-<p>重启apache2服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart apache2.service</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>到这里基本结束，然后在浏览器中输入你的域名 激活安装wordpress就行，数据库的信息就是刚刚设置的信息</p>
+        <h3 id="0x00-准备工作"><a href="#0x00-准备工作" class="headerlink" title="0x00 准备工作"></a>0x00 准备工作</h3><blockquote>
+<p><strong>环境：win10、vmware workstation14</strong></p>
+<p><strong>版本信息：MAC OS X 10.11 </strong></p>
+<p><strong>下载：</strong>unlocker、mac cdr镜像（下载dmg的镜像没有用，即便转成iso的一样不行）</p>
+<p><strong>其他</strong>：打开unlocker，然后右键管理员运行win-install.cmd</p>
+<p>(<strong>在这之前需要在任务管理器里面结束vmware的进程</strong>)</p>
 </blockquote>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/f75f31cbb3fe491d313d2004d4f81b40.png" alt=""> </p>
+<ul>
+<li>然后参照下面图示的操作进行即可</li>
+</ul>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/40bd3119a3361029258ddfe1c72493f9.png" alt=""></p>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/c24cf682afa9b75ce18ac934b5ab534e.png" alt=""></p>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/013c89f484fef99be41b243a22a13881.png" alt=""></p>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/cd97bbd15983056207d4e8a2c64387bc.png" alt=""></p>
+<blockquote>
+<p>注：磁盘容量不小于默认的40G就好</p>
+<p>选择将虚拟磁盘存储为单个文件，然后下一步完成</p>
+</blockquote>
+<hr>
+<h3 id="0x02-配置虚拟机"><a href="#0x02-配置虚拟机" class="headerlink" title="0x02 配置虚拟机"></a>0x02 配置虚拟机</h3><ul>
+<li>编辑刚刚创建的虚拟机、在CD/DVD中选择使用ISO映像文件，选择下载好的mac的cdr镜像文件，然后启动虚拟机</li>
+</ul>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/c6ff016713ae69d9d2d47c5f9da32a5b.png" alt=""></p>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/3ef2abe4093b34914959636917afea52.png" alt=""></p>
+<ul>
+<li>然后遇到上面的问题，找到你创建的虚拟机的位置，然后用文本编辑器打开<strong>vmx</strong>文件</li>
+<li>在<code>smc.present = &quot;TRUE&quot;</code> 后面添加 <code>smc.version = &quot;0&quot;</code>，保存</li>
+</ul>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/041bbf8df550e3f8cc73a5fc1f0ef407.png" alt=""></p>
+<ul>
+<li>重新打开虚拟机，就出现启动页面了</li>
+</ul>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/8d23d870d4e3f5ee285eb257ffa36407.png" alt=""></p>
+<ul>
+<li>选择语言，用哪个就选择那个</li>
+</ul>
+<ul>
+<li>会出现如下界面，点击屏幕上方的“实用工具 -&gt;磁盘工具”。<br>选中 <code>“ vmware workstation SATA hard drive media ”</code>, “抹掉”</li>
+</ul>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/4541ae26a6284585f5ae0f46d565f441.png" alt=""> <img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/f2d65bd4fc416d6d3e44655b10e5a01f.png" alt=""></p>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/033c6b2f506c660eafa025e331c06dd2.png" alt=""></p>
+<ul>
+<li>退出磁盘工具，选中磁盘，继续</li>
+</ul>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/e99f998cce4f2c5772cd43a4cc45a809.png" alt=""></p>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/7b263658618f2ebbcb3892d0a1a62f55.png" alt=""></p>
+<ul>
+<li>成功安装</li>
+</ul>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/5143472d672f3abe25313694b383b80b.png" alt=""></p>
+<hr>
+<h3 id="0x03-文件共享设置"><a href="#0x03-文件共享设置" class="headerlink" title="0x03 文件共享设置"></a>0x03 文件共享设置</h3><blockquote>
+<p>如果要实现和本机文件的共享，需要安装vmtools<br>首先右键右面的盘符标志推出<br>然后点击左上角的虚拟机-&gt;可移动设备-&gt;CD/DVD-&gt;设置</p>
+</blockquote>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/9815a765649467ddd39c078c8541ccca.png" alt=""></p>
+<p>更换IOS镜像为unlocker中的darwin.iso，位置在unlocker的tools中</p>
+<p>然后屏幕右下角箭头指向的，点击连接</p>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/484ae11854526e0f936e494a658d3d7c.png" alt=""></p>
+<p>之后桌面就会多了个vmwaretools,打开安装VMware Tools</p>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/33d31b47e9b2251a9525c5810731e102.png" alt=""></p>
+<p>安装完成后就可以添加共享文件夹了</p>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/6fc93784cb9a0111f948d0aef8cfe634.png" alt=""></p>
+<hr>
+<h3 id="0x04-分辨率设置"><a href="#0x04-分辨率设置" class="headerlink" title="0x04 分辨率设置"></a>0x04 分辨率设置</h3><blockquote>
+<p>关于分辨率的问题，在mac里面无法直接更改<br>但是安装了vmware tools就不一样了，左上角<br>查看-&gt;自动调整大小-&gt;自动适应客户机</p>
+</blockquote>
+<p><img src="http://www.yanngyolo.club/wp-content/uploads/2018/08/aef06a4b6b848f1b2b571dc2d507ab83.png" alt=""> </p>
 
       
 
@@ -1342,7 +1357,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/29/利用wordpress搭建博客/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/09/29/Vmware安装Mac过程/">展开全文 >></a>
         </p>
       
 
@@ -1407,7 +1422,7 @@
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -1427,6 +1442,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
+      
+      
     
       
       
@@ -1438,13 +1455,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">true</a></li>
+      
         
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -1465,19 +1484,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CTF</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">环境配置</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1489,7 +1496,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">环境配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">杂文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CTF</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1539,6 +1558,30 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://supery4ng.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Y4ng</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://hvnt3r.top/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Hvnt3r</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.yof3ng.xyz/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Yof3ng</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.0link.top/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>0LinkSec</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
     
 
     
