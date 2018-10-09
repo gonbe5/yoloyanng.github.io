@@ -47,7 +47,7 @@
 			<img src="/assets/img/Misaka.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Ithaca&#39;s Tavern</a></h1>
+		  <h1 class="header-author"><a href="/">yoloyanng</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">不成问题的问题</p>
@@ -58,22 +58,20 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/photo">相册</a></li>
-	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">Article</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">Friends</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">博客</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">About</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -81,6 +79,8 @@
 			<div class="social">
 				
 					<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="mail" target="_blank" href="/yoloyanng@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -103,14 +103,12 @@
 				<img src="/assets/img/Misaka.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Ithaca&#39;s Tavern</h1>
+			  <h1 class="header-author js-header-author">yoloyanng</h1>
 			</hgroup>
 			
 			<p class="header-subtitle"><i class="icon icon-quo-left"></i>不成问题的问题<i class="icon icon-quo-right"></i></p>
 			
 			
-			
-				
 			
 				
 			
@@ -121,6 +119,8 @@
 					
 						<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
 			        
+						<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
+			        
 						<a class="mail" target="_blank" href="/yoloyanng@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
@@ -130,9 +130,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/photo">相册</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -148,126 +146,6 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-    <article id="post-利用wordpress搭建博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/29/利用wordpress搭建博客/">利用wordpress搭建博客</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/29/利用wordpress搭建博客/" class="archive-article-date">
-  	<time datetime="2018-09-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="1、准备LAMP环境"><a href="#1、准备LAMP环境" class="headerlink" title="1、准备LAMP环境"></a>1、准备LAMP环境</h5><p>安装Apache2 在终端输入如下命令来安装apache2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apache2 -y</span><br></pre></td></tr></table></figure>
-<h5 id="2-、安装PHP组件"><a href="#2-、安装PHP组件" class="headerlink" title="2 、安装PHP组件"></a>2 、安装PHP组件</h5><p>分别输入下述两条命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.0 -y</span><br><span class="line">sudo apt-get install libapache2-mod-php7.0</span><br></pre></td></tr></table></figure>
-<h5 id="3、安装MySQL服务"><a href="#3、安装MySQL服务" class="headerlink" title="3、安装MySQL服务"></a>3、安装MySQL服务</h5><p>这个过程中会提示设置MySQL的密码，需要连续输入两次，密码需要记住 输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server -y</span><br></pre></td></tr></table></figure>
-<p>安装php MySQL相关组件 输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.0-mysql</span><br></pre></td></tr></table></figure>
-<p>安装phpmyadmin 在这一过程会提示选择Apache2,按回车就行，然后依次输入你的服务器登录的密码和刚才设置的MySQL数据库的密码 依次输入下面两条命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install phpmyadmin -y</span><br><span class="line">sudo ln -s /usr/share/phpmyadmin/var/www/html/phpmyadmin</span><br></pre></td></tr></table></figure>
-<p>重启MySQL服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysql restart</span><br></pre></td></tr></table></figure>
-<p>重启Apache服务：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart apache2.service</span><br></pre></td></tr></table></figure>
-<h5 id="4、安装并且配置wordpress"><a href="#4、安装并且配置wordpress" class="headerlink" title="4、安装并且配置wordpress"></a>4、安装并且配置wordpress</h5><p>4.1、安装Wordpress压缩包，可以到<a href="https://cn.wordpress.org" target="_blank" rel="noopener">官网</a>复制最新的压缩包的下载连接，记得下载的是zip格式的文件，利用wget命令来下载，这里给出的是目前最新的版本（时间是2018.6.25） 输入如下命令：（默认下载到当前目录，可以通过 ls 命令查看）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo wget https://cn.wordpress.org/wordpress-4.9.4-zh_CN.zip</span><br></pre></td></tr></table></figure>
-<p>输入命令：（接下后再次通过 ls 查看发现会多了Wordpress的文件）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo unzip wordpress-4.9.4-zh_CN.zip</span><br></pre></td></tr></table></figure>
-<p>解压不了可能是unzip没有下载，通过apt-get 命令下载unzip后在解压</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install unzip</span><br></pre></td></tr></table></figure>
-<p>为wordpress配置一个数据库（在这一部分的内容要记住，因为后面进入Wordpress的时候需要） 输入下列代码，然后输入你的MySQL密码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-<p>为wordpress创建一个名为wordpress的数据库（等会登陆的时候需要你输入数据库的名字）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE wordpress;</span><br></pre></td></tr></table></figure>
-<p>为这个数据库设置一个用户名为wordpress_user</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER wordpress_user;</span><br></pre></td></tr></table></figure>
-<p>为这个用户设置一个用户密码为password(可以自己更改能记住的密码，然后后面的也都要改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD FOR wordpress_user= PASSWORD(&quot;password123&quot;);</span><br></pre></td></tr></table></figure>
-<p>为这个用户配置数据库的访问权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON wordpress.* TO wordpress_user IDENTIFIED BY&quot;password123&quot;;</span><br></pre></td></tr></table></figure>
-<p>生效这些配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
-<p>然后退出MySQL</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit;</span><br></pre></td></tr></table></figure>
-<p>配置Wordpress 依次地输入下面的代码： 因为php默认访问<code>/var/www/html/</code> 把刚刚安装的wordpress复制到<code>/var/www/html/``下面</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv wordpress/* /var/www/html/</span><br></pre></td></tr></table></figure>
-<p>然后可以删除输入下面的命令删除原本的wordpress(强迫症的原因)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf wordpress</span><br></pre></td></tr></table></figure>
-<p>设置权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod -R 777 /var/www/html/</span><br></pre></td></tr></table></figure>
-<p>将 apache 指定到 index.html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /var/www/html/index.html /var/www/html/index~.html</span><br></pre></td></tr></table></figure>
-<p>重启apache2服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart apache2.service</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>到这里基本结束，然后在浏览器中输入你的域名 激活安装wordpress就行，数据库的信息就是刚刚设置的信息</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">环境配置</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/29/利用wordpress搭建博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
     <article id="post-课堂上的《图片隐写学习》" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -594,104 +472,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/09/28/几道图片隐写题三/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-几道图片隐写题二" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/27/几道图片隐写题二/">几道图片隐写题二</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/27/几道图片隐写题二/" class="archive-article-date">
-  	<time datetime="2018-09-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>网鼎杯第一场MISC—-clip</p>
-<p><a href="https://share.weiyun.com/54SMoop" target="_blank" rel="noopener">题目下载链接</a></p>
-</blockquote>
-<p>下载题目压缩包解压后得到两个文件 desc.txt  和  damaged.disk</p>
-<p>desc.txt理面是一段英文，翻译后就是：</p>
-<blockquote>
-<p>Horse Clip-Clop<br>A strange filesystem is recovered from a damaged old hard disk.</p>
-<p>马夹子<br>从损坏的旧硬盘恢复奇怪的文件系统。</p>
-</blockquote>
-<p>然后百度、Google还是看不懂，就不对这个txt文件分析了</p>
-<hr>
-<ul>
-<li>把 damaged.disk拖到010Editor中看看有什么信息</li>
-</ul>
-<p><img src="https://i.loli.net/2018/09/27/5bac97e575fa8.png" alt=""></p>
-<p>文件开头，看不懂。。。。。。</p>
-<p>往下继续翻，CTRL+F 搜索一下 flag，key，ctf 无果（太天真了）</p>
-<p>后面发现了PNG的文件头，终于找到关键信息</p>
-<p><img src="https://i.loli.net/2018/09/27/5bac98f96ed4c.png" alt=""></p>
-<p>往下找发现有两个IHDR，CTRL +F 发现确实就是两个然后裁剪出来补上文件头得到两张图片</p>
-<p><img src="https://i.loli.net/2018/09/27/5bac9af42b0b3.png" alt=""></p>
-<p><img src="https://i.loli.net/2018/09/27/5bac9b07db662.png" alt=""></p>
-<p>然后用PS将两张图片进行拼接，就得到flag了</p>
-<p><img src="https://i.loli.net/2018/09/28/5badb2677bd56.png" alt=""></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CTF</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/27/几道图片隐写题二/">展开全文 >></a>
         </p>
       
 
@@ -1178,6 +958,104 @@
 
 
   
+    <article id="post-几道图片隐写题二" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/27/几道图片隐写题二/">几道图片隐写题二</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/27/几道图片隐写题二/" class="archive-article-date">
+  	<time datetime="2018-09-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>网鼎杯第一场MISC—-clip</p>
+<p><a href="https://share.weiyun.com/54SMoop" target="_blank" rel="noopener">题目下载链接</a></p>
+</blockquote>
+<p>下载题目压缩包解压后得到两个文件 desc.txt  和  damaged.disk</p>
+<p>desc.txt理面是一段英文，翻译后就是：</p>
+<blockquote>
+<p>Horse Clip-Clop<br>A strange filesystem is recovered from a damaged old hard disk.</p>
+<p>马夹子<br>从损坏的旧硬盘恢复奇怪的文件系统。</p>
+</blockquote>
+<p>然后百度、Google还是看不懂，就不对这个txt文件分析了</p>
+<hr>
+<ul>
+<li>把 damaged.disk拖到010Editor中看看有什么信息</li>
+</ul>
+<p><img src="https://i.loli.net/2018/09/27/5bac97e575fa8.png" alt=""></p>
+<p>文件开头，看不懂。。。。。。</p>
+<p>往下继续翻，CTRL+F 搜索一下 flag，key，ctf 无果（太天真了）</p>
+<p>后面发现了PNG的文件头，终于找到关键信息</p>
+<p><img src="https://i.loli.net/2018/09/27/5bac98f96ed4c.png" alt=""></p>
+<p>往下找发现有两个IHDR，CTRL +F 发现确实就是两个然后裁剪出来补上文件头得到两张图片</p>
+<p><img src="https://i.loli.net/2018/09/27/5bac9af42b0b3.png" alt=""></p>
+<p><img src="https://i.loli.net/2018/09/27/5bac9b07db662.png" alt=""></p>
+<p>然后用PS将两张图片进行拼接，就得到flag了</p>
+<p><img src="https://i.loli.net/2018/09/28/5badb2677bd56.png" alt=""></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CTF</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/27/几道图片隐写题二/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-《伊萨卡岛》" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1198,47 +1076,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>当你启程前往伊萨卡，</p>
-<p>但愿你的道路漫长，</p>
-<p>充满奇迹，充满发现。</p>
-<p>莱斯特律戈涅斯巨人，独眼巨人，</p>
-<p>愤怒的波塞冬海神－－不要怕他们：</p>
-<p>你将不会在途中碰到诸如此类的怪物，</p>
-<p>只要你高扬你的思想，</p>
-<p>只要有一种特殊的感觉，</p>
-<p>借出你的精神和肉体。</p>
-<p>莱斯特律戈涅斯巨人，独眼巨人，</p>
-<p>野蛮的波塞冬海神－－你将不会跟他们遭遇</p>
-<p>除非你将他们一直带进你的灵魂，</p>
-<p>除非你的灵魂将他们树立在你的面前。</p>
-<p>但愿你的道路漫长。</p>
-<p>但愿那里有很多夏天的早晨，</p>
-<p>当你无比快乐和兴奋地</p>
-<p>进入你第一次见到的海港：</p>
-<p>但愿你在腓尼基人的贸易市场停步</p>
-<p>购买精美的物件，</p>
-<p>珍珠母和珊瑚，琥珀和黑檀，</p>
-<p>各式各样销魂的香水</p>
-<p>－－你要多销魂就有多销魂：</p>
-<p>愿你走访众多埃及城市</p>
-<p>向那些有识之士讨教并继续讨教。</p>
-<p>让伊萨卡常在你心中，</p>
-<p>抵达那里是你此行的目的。</p>
-<p>但路上不要过于匆促，</p>
-<p>最好多延长几年，</p>
-<p>那时当你上得了岛你也就老了，</p>
-<p>一路所得已经叫你富甲四方，</p>
-<p>用不着伊萨卡来让你财源滚滚。</p>
-<p>是伊萨卡赐予你如此神奇的旅行，</p>
-<p>没有它你可不会启程前来。</p>
-<p>现在她再也没有什么可以给你的了。</p>
-<p>而如果你发现它原来是这么穷，那可不是</p>
-<p>伊萨卡想愚弄你。</p>
-<p>既然那时你已经变得很聪慧，并且见多识广，</p>
-<p>你也就不会不明白，</p>
-<p>这些伊萨卡意味着什么。</p>
-<p>​                                —— 卡瓦菲斯</p>
-
+        <p><img src="https://i.loli.net/2018/10/09/5bbc07629149b.jpg" alt=""></p>
+        
+          <a class="article-more-a" href="/2018/09/26/《伊萨卡岛》/#more">More >></a>
+        
       
 
       
@@ -1305,7 +1146,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 Ithaca&#39;s Tavern
+    		&copy; 2018 yoloyanng
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1380,15 +1221,15 @@ MathJax.Hub.Queue(function() {
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">Article</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">Friends</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">博客</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">About</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -1417,15 +1258,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Game</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">环境配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1433,7 +1274,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
+                <a href="javascript:void(0)" class="js-tag color5">环境配置</a>
               </li>
              
               <li class="article-tag-list-item">
