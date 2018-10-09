@@ -19,10 +19,8 @@
 <meta name="twitter:title" content="Ithaca&#39;s Tavern">
 <meta name="twitter:description" content="杯子捧在一起 都是梦破碎的声音">
   
-    <link rel="alternative" href="/atom.xml" title="Ithaca&#39;s Tavern" type="application/atom+xml">
   
-  
-    <link rel="icon" href="/assets/img/favicon.png">
+    <link rel="icon" href="/assets/img/favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -71,11 +69,11 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">Friens</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">Friends</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">ABOUT ME</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">About</a>
     			
             
 		</nav>
@@ -83,8 +81,6 @@
 			<div class="social">
 				
 					<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
 					<a class="mail" target="_blank" href="/yoloyanng@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -124,8 +120,6 @@
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
 						<a class="mail" target="_blank" href="/yoloyanng@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -175,31 +169,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="MATLAB入门"><a href="#MATLAB入门" class="headerlink" title="MATLAB入门"></a>MATLAB入门</h2><ul>
-<li><p>加（+）、减（—）、乘（*）、除（/  ,\)没什么特别的，主要是这个除法</p>
-<p>2\4表示    4除以2</p>
-<p>2/4表示    2除以4</p>
-</li>
-</ul>
-<ul>
-<li><img src="https://i.loli.net/2018/10/08/5bbb724c00ac4.png" alt=""></li>
-</ul>
-<h3 id="Point1"><a href="#Point1" class="headerlink" title="Point1"></a>Point1</h3><p>计算下面式子的逼近过程</p>
-<script type="math/tex; mode=display">
-\sin x=\sum_{K=1}^{\infty}{(-1)^k}\frac{x^{2k-1}}{(2k-1)!}</script><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">1</span>;                     <span class="comment">%x值输入          </span></span><br><span class="line"><span class="built_in">sin</span>(x)                   <span class="comment">%输出sinx </span></span><br><span class="line">a1=x^(<span class="number">2</span>*<span class="number">1</span><span class="number">-1</span>)/<span class="built_in">factorial</span>(<span class="number">2</span>*<span class="number">1</span><span class="number">-1</span>)      <span class="comment">%一次部分和 </span></span><br><span class="line">a2=a1-x^(<span class="number">2</span>*<span class="number">2</span><span class="number">-1</span>)/<span class="built_in">factorial</span>(<span class="number">2</span>*<span class="number">2</span><span class="number">-1</span>)   <span class="comment">%二次部分和 </span></span><br><span class="line">a3=a2+x^(<span class="number">2</span>*<span class="number">3</span><span class="number">-1</span>)/<span class="built_in">factorial</span>(<span class="number">2</span>*<span class="number">3</span><span class="number">-1</span>)   <span class="comment">%三次部分和 </span></span><br><span class="line">a4=a3-x^(<span class="number">2</span>*<span class="number">4</span><span class="number">-1</span>)/<span class="built_in">factorial</span>(<span class="number">2</span>*<span class="number">4</span><span class="number">-1</span>)   <span class="comment">%四次部分和</span></span><br><span class="line">a5=a4+x^(<span class="number">2</span>*<span class="number">5</span><span class="number">-1</span>)/<span class="built_in">factorial</span>(<span class="number">2</span>*<span class="number">5</span><span class="number">-1</span>)   <span class="comment">%五次部分和</span></span><br><span class="line">a6=a5-x^(<span class="number">2</span>*<span class="number">6</span><span class="number">-1</span>)/<span class="built_in">factorial</span>(<span class="number">2</span>*<span class="number">6</span><span class="number">-1</span>)   <span class="comment">%六次部分和</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/10/08/5bbb791458971.png" alt=""></p>
-<h3 id="point2"><a href="#point2" class="headerlink" title="point2"></a>point2</h3><p>利用下式求解<strong>π</strong></p>
-<script type="math/tex; mode=display">
-π=4\sum_{n=1}^{\infty}{(-1)^{n+1}}\frac{1}{2n-1}</script><blockquote>
-<p>待学会后在列出函数</p>
-</blockquote>
-<h3 id="Point3-矩阵和数组的表示"><a href="#Point3-矩阵和数组的表示" class="headerlink" title="Point3  矩阵和数组的表示"></a>Point3  矩阵和数组的表示</h3><p>用[]括起来，” ; “ 分割开每一行，每行使用空格或” , “ 进行分割</p>
-<p><img src="https://i.loli.net/2018/10/08/5bbb7d31b9d4d.png" alt=""></p>
-<h3 id="Point4-等量元素向量"><a href="#Point4-等量元素向量" class="headerlink" title="Point4   等量元素向量"></a>Point4   等量元素向量</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vec1=<span class="number">10</span>:<span class="number">5</span>:<span class="number">61</span>      <span class="comment">%10为起点，5为步长（可以为负数，缺省时默认为1），61为终止</span></span><br><span class="line">vec2=<span class="built_in">linspace</span>(<span class="number">10</span>,<span class="number">60</span>,<span class="number">11</span>)   <span class="comment">%10为起点，60为终点，11为生成向量长度</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/10/08/5bbb7e58b1742.png" alt=""></p>
-<h3 id="Point5-矩阵四则运算"><a href="#Point5-矩阵四则运算" class="headerlink" title="Point5   矩阵四则运算"></a>Point5   矩阵四则运算</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">A=[<span class="number">5</span> <span class="number">6</span>;<span class="number">8</span> <span class="number">9</span>];</span><br><span class="line">B=[<span class="number">4</span> <span class="number">6</span>;<span class="number">3</span> <span class="number">8</span>];</span><br><span class="line">A+B</span><br><span class="line">A-B</span><br><span class="line">A*B</span><br><span class="line">A/B</span><br><span class="line">A.*B  <span class="comment">%矩阵A中的元素与矩阵B中的元素按位置依次相乘</span></span><br><span class="line">A./B  <span class="comment">%%矩阵A中的元素与矩阵B中的元素按位置依次相除</span></span><br><span class="line">A^<span class="number">2</span>   <span class="comment">%矩阵A的2次方</span></span><br><span class="line">A.^<span class="number">2</span>  <span class="comment">%矩阵A的各个元素进行2次方</span></span><br></pre></td></tr></table></figure>
-<h3 id="Point6-矩阵的寻址，添加"><a href="#Point6-矩阵的寻址，添加" class="headerlink" title="Point6   矩阵的寻址，添加"></a>Point6   矩阵的寻址，添加</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A=[<span class="number">1</span>:<span class="number">5</span>;<span class="number">6</span>:<span class="number">10</span>;<span class="number">11</span>:<span class="number">15</span>;<span class="number">16</span>:<span class="number">20</span>;<span class="number">21</span>:<span class="number">25</span>;<span class="number">26</span>:<span class="number">30</span>]; </span><br><span class="line">B=[A,ones(size(A,<span class="number">1</span>),<span class="number">1</span>)]; </span><br><span class="line"><span class="comment">%ones(size(x,1),1)表示生成一个行数与x一致，列数等于1且所有元素都是1的矩阵</span></span><br><span class="line">C=[A;<span class="number">31</span>:<span class="number">35</span>];     <span class="comment">%添加一行31到35</span></span><br><span class="line">D=A(<span class="number">1</span>:<span class="number">2</span>,:);      <span class="comment">%取A的1、2行              </span></span><br><span class="line">E=A(:,<span class="number">1</span>:<span class="number">2</span>);      <span class="comment">%取A的1、2列</span></span><br><span class="line">F=A(<span class="number">2</span>,<span class="number">3</span>);        <span class="comment">%取A的第2列第3行元素</span></span><br></pre></td></tr></table></figure>
-
+        <h2 id="MATLAB入门"><a href="#MATLAB入门" class="headerlink" title="MATLAB入门"></a>MATLAB入门</h2><p><img src="https://i.loli.net/2018/10/09/5bbc03777cf45.jpeg" alt=""></p>
+        
+          <a class="article-more-a" href="/2018/10/08/数模学习—-day1/#more">More >></a>
+        
       
 
       
@@ -1487,11 +1460,11 @@ MathJax.Hub.Queue(function() {
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">Friens</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">Friends</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">ABOUT ME</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">About</a></li>
       
         
     </ul>
@@ -1516,15 +1489,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Game</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">环境配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1533,10 +1510,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Game</a>
               </li>
              
               <li class="article-tag-list-item">
