@@ -62,15 +62,15 @@
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">Article</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">true</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">Friens</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">ABOUT ME</a>
     			
             
 		</nav>
@@ -147,6 +147,126 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-利用wordpress搭建博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/29/利用wordpress搭建博客/">利用wordpress搭建博客</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/29/利用wordpress搭建博客/" class="archive-article-date">
+  	<time datetime="2018-09-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="1、准备LAMP环境"><a href="#1、准备LAMP环境" class="headerlink" title="1、准备LAMP环境"></a>1、准备LAMP环境</h5><p>安装Apache2 在终端输入如下命令来安装apache2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apache2 -y</span><br></pre></td></tr></table></figure>
+<h5 id="2-、安装PHP组件"><a href="#2-、安装PHP组件" class="headerlink" title="2 、安装PHP组件"></a>2 、安装PHP组件</h5><p>分别输入下述两条命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.0 -y</span><br><span class="line">sudo apt-get install libapache2-mod-php7.0</span><br></pre></td></tr></table></figure>
+<h5 id="3、安装MySQL服务"><a href="#3、安装MySQL服务" class="headerlink" title="3、安装MySQL服务"></a>3、安装MySQL服务</h5><p>这个过程中会提示设置MySQL的密码，需要连续输入两次，密码需要记住 输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server -y</span><br></pre></td></tr></table></figure>
+<p>安装php MySQL相关组件 输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.0-mysql</span><br></pre></td></tr></table></figure>
+<p>安装phpmyadmin 在这一过程会提示选择Apache2,按回车就行，然后依次输入你的服务器登录的密码和刚才设置的MySQL数据库的密码 依次输入下面两条命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install phpmyadmin -y</span><br><span class="line">sudo ln -s /usr/share/phpmyadmin/var/www/html/phpmyadmin</span><br></pre></td></tr></table></figure>
+<p>重启MySQL服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysql restart</span><br></pre></td></tr></table></figure>
+<p>重启Apache服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart apache2.service</span><br></pre></td></tr></table></figure>
+<h5 id="4、安装并且配置wordpress"><a href="#4、安装并且配置wordpress" class="headerlink" title="4、安装并且配置wordpress"></a>4、安装并且配置wordpress</h5><p>4.1、安装Wordpress压缩包，可以到<a href="https://cn.wordpress.org" target="_blank" rel="noopener">官网</a>复制最新的压缩包的下载连接，记得下载的是zip格式的文件，利用wget命令来下载，这里给出的是目前最新的版本（时间是2018.6.25） 输入如下命令：（默认下载到当前目录，可以通过 ls 命令查看）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo wget https://cn.wordpress.org/wordpress-4.9.4-zh_CN.zip</span><br></pre></td></tr></table></figure>
+<p>输入命令：（接下后再次通过 ls 查看发现会多了Wordpress的文件）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo unzip wordpress-4.9.4-zh_CN.zip</span><br></pre></td></tr></table></figure>
+<p>解压不了可能是unzip没有下载，通过apt-get 命令下载unzip后在解压</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install unzip</span><br></pre></td></tr></table></figure>
+<p>为wordpress配置一个数据库（在这一部分的内容要记住，因为后面进入Wordpress的时候需要） 输入下列代码，然后输入你的MySQL密码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<p>为wordpress创建一个名为wordpress的数据库（等会登陆的时候需要你输入数据库的名字）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE wordpress;</span><br></pre></td></tr></table></figure>
+<p>为这个数据库设置一个用户名为wordpress_user</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER wordpress_user;</span><br></pre></td></tr></table></figure>
+<p>为这个用户设置一个用户密码为password(可以自己更改能记住的密码，然后后面的也都要改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD FOR wordpress_user= PASSWORD(&quot;password123&quot;);</span><br></pre></td></tr></table></figure>
+<p>为这个用户配置数据库的访问权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON wordpress.* TO wordpress_user IDENTIFIED BY&quot;password123&quot;;</span><br></pre></td></tr></table></figure>
+<p>生效这些配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
+<p>然后退出MySQL</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit;</span><br></pre></td></tr></table></figure>
+<p>配置Wordpress 依次地输入下面的代码： 因为php默认访问<code>/var/www/html/</code> 把刚刚安装的wordpress复制到<code>/var/www/html/``下面</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv wordpress/* /var/www/html/</span><br></pre></td></tr></table></figure>
+<p>然后可以删除输入下面的命令删除原本的wordpress(强迫症的原因)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf wordpress</span><br></pre></td></tr></table></figure>
+<p>设置权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod -R 777 /var/www/html/</span><br></pre></td></tr></table></figure>
+<p>将 apache 指定到 index.html</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /var/www/html/index.html /var/www/html/index~.html</span><br></pre></td></tr></table></figure>
+<p>重启apache2服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart apache2.service</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>到这里基本结束，然后在浏览器中输入你的域名 激活安装wordpress就行，数据库的信息就是刚刚设置的信息</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">环境配置</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/29/利用wordpress搭建博客/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-课堂上的《图片隐写学习》" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -386,126 +506,6 @@
 
 
   
-    <article id="post-利用wordpress搭建博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/29/利用wordpress搭建博客/">利用wordpress搭建博客</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/29/利用wordpress搭建博客/" class="archive-article-date">
-  	<time datetime="2018-09-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="1、准备LAMP环境"><a href="#1、准备LAMP环境" class="headerlink" title="1、准备LAMP环境"></a>1、准备LAMP环境</h5><p>安装Apache2 在终端输入如下命令来安装apache2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apache2 -y</span><br></pre></td></tr></table></figure>
-<h5 id="2-、安装PHP组件"><a href="#2-、安装PHP组件" class="headerlink" title="2 、安装PHP组件"></a>2 、安装PHP组件</h5><p>分别输入下述两条命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.0 -y</span><br><span class="line">sudo apt-get install libapache2-mod-php7.0</span><br></pre></td></tr></table></figure>
-<h5 id="3、安装MySQL服务"><a href="#3、安装MySQL服务" class="headerlink" title="3、安装MySQL服务"></a>3、安装MySQL服务</h5><p>这个过程中会提示设置MySQL的密码，需要连续输入两次，密码需要记住 输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server -y</span><br></pre></td></tr></table></figure>
-<p>安装php MySQL相关组件 输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install php7.0-mysql</span><br></pre></td></tr></table></figure>
-<p>安装phpmyadmin 在这一过程会提示选择Apache2,按回车就行，然后依次输入你的服务器登录的密码和刚才设置的MySQL数据库的密码 依次输入下面两条命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install phpmyadmin -y</span><br><span class="line">sudo ln -s /usr/share/phpmyadmin/var/www/html/phpmyadmin</span><br></pre></td></tr></table></figure>
-<p>重启MySQL服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysql restart</span><br></pre></td></tr></table></figure>
-<p>重启Apache服务：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart apache2.service</span><br></pre></td></tr></table></figure>
-<h5 id="4、安装并且配置wordpress"><a href="#4、安装并且配置wordpress" class="headerlink" title="4、安装并且配置wordpress"></a>4、安装并且配置wordpress</h5><p>4.1、安装Wordpress压缩包，可以到<a href="https://cn.wordpress.org" target="_blank" rel="noopener">官网</a>复制最新的压缩包的下载连接，记得下载的是zip格式的文件，利用wget命令来下载，这里给出的是目前最新的版本（时间是2018.6.25） 输入如下命令：（默认下载到当前目录，可以通过 ls 命令查看）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo wget https://cn.wordpress.org/wordpress-4.9.4-zh_CN.zip</span><br></pre></td></tr></table></figure>
-<p>输入命令：（接下后再次通过 ls 查看发现会多了Wordpress的文件）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo unzip wordpress-4.9.4-zh_CN.zip</span><br></pre></td></tr></table></figure>
-<p>解压不了可能是unzip没有下载，通过apt-get 命令下载unzip后在解压</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install unzip</span><br></pre></td></tr></table></figure>
-<p>为wordpress配置一个数据库（在这一部分的内容要记住，因为后面进入Wordpress的时候需要） 输入下列代码，然后输入你的MySQL密码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-<p>为wordpress创建一个名为wordpress的数据库（等会登陆的时候需要你输入数据库的名字）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE wordpress;</span><br></pre></td></tr></table></figure>
-<p>为这个数据库设置一个用户名为wordpress_user</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER wordpress_user;</span><br></pre></td></tr></table></figure>
-<p>为这个用户设置一个用户密码为password(可以自己更改能记住的密码，然后后面的也都要改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD FOR wordpress_user= PASSWORD(&quot;password123&quot;);</span><br></pre></td></tr></table></figure>
-<p>为这个用户配置数据库的访问权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON wordpress.* TO wordpress_user IDENTIFIED BY&quot;password123&quot;;</span><br></pre></td></tr></table></figure>
-<p>生效这些配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
-<p>然后退出MySQL</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit;</span><br></pre></td></tr></table></figure>
-<p>配置Wordpress 依次地输入下面的代码： 因为php默认访问<code>/var/www/html/</code> 把刚刚安装的wordpress复制到<code>/var/www/html/``下面</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv wordpress/* /var/www/html/</span><br></pre></td></tr></table></figure>
-<p>然后可以删除输入下面的命令删除原本的wordpress(强迫症的原因)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf wordpress</span><br></pre></td></tr></table></figure>
-<p>设置权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod -R 777 /var/www/html/</span><br></pre></td></tr></table></figure>
-<p>将 apache 指定到 index.html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /var/www/html/index.html /var/www/html/index~.html</span><br></pre></td></tr></table></figure>
-<p>重启apache2服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart apache2.service</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>到这里基本结束，然后在浏览器中输入你的域名 激活安装wordpress就行，数据库的信息就是刚刚设置的信息</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">环境配置</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/29/利用wordpress搭建博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-几道图片隐写题三" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -593,119 +593,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/09/28/几道图片隐写题三/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-几道图片隐写题一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/27/几道图片隐写题一/">几道图片隐写题一</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/27/几道图片隐写题一/" class="archive-article-date">
-  	<time datetime="2018-09-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>代码参考：合天智汇 <a href="https://mp.weixin.qq.com/s/kxpmNpk8xAA3mbMtzyWaiw" target="_blank" rel="noopener">几道隐写题目的总结</a></p>
-<p>网鼎杯 第一场MISC</p>
-<p><a href="https://share.weiyun.com/5B1ykSO" target="_blank" rel="noopener">题目下载链接</a></p>
-</blockquote>
-<ul>
-<li>打开压缩包得到的是一张PNG格式的图片</li>
-</ul>
-<p><img src="https://i.loli.net/2018/09/27/5bac57670a4c5.png" alt="1538017412117"></p>
-<ul>
-<li>首先拖放到010Editor中：</li>
-</ul>
-<p><img src="https://i.loli.net/2018/09/27/5bac5767a95c3.png" alt="1538017580794"></p>
-<p>CTRL+F 搜索IHDR发现只有一个，没有其他问题</p>
-<ul>
-<li>然后放到KALI中分析一波：</li>
-</ul>
-<p><img src="https://i.loli.net/2018/09/27/5bac5768bd784.png" alt=""></p>
-<p>图片能够在kali中打开，说明不是宽高的隐写，因为如果修改了宽高在linux中是无法正常显示的</p>
-<ul>
-<li>然后binwalk分析一波：</li>
-</ul>
-<p><img src="https://i.loli.net/2018/09/27/5bac57681f66f.png" alt=""></p>
-<p>同样的没有什么问题</p>
-<ul>
-<li>最后就是放到 stegslove里面试一试了</li>
-</ul>
-<blockquote>
-<p>科普一下png的知识</p>
-</blockquote>
-<p>png支持RGBA四个通道，每个通道占8个二进制位，隐写文件或数据一般都在各个通道的低位，因为低位的变化不会引起较大的视觉变化，图片还是原来的图片，但是你不知道是在哪个通道，这里有4个通道，如果藏在一个通道的低位的话，有四种可能，如果藏在两个通道的低位的话，可能进行各种运算操作后出现新的图片，加减乘除与或异或</p>
-<p><img src="https://i.loli.net/2018/09/27/5bac576932ee5.png" alt=""></p>
-<p>发现Red plane 0是空的，按理来说应该也是”雪花“的，所以应该是有问题的</p>
-<p>然后 Analyse - Data Extract，查看该通道，得知是LSB隐写</p>
-<p><img src="https://i.loli.net/2018/09/27/5bac5769ef894.png" alt=""></p>
-<p>后面得知就是吧Alpha、Red、Green、Blue 0通道进行异或处理就能够得到flag了，可以通过stegslove获得，下面说一下通过python编写脚本进行色道分离异或处理的方法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lowbit</span><span class="params">(x)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> x &amp; <span class="number">0x1</span></span><br><span class="line"></span><br><span class="line">png= cv2.imread(<span class="string">"flag_enc.png"</span> , cv2.IMREAD_UNCHANGED)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个temp文件夹保存异或之后的图片</span></span><br><span class="line">os.system(<span class="string">"mkdir temp"</span>)</span><br><span class="line"><span class="comment"># 打开进入temp文件夹</span></span><br><span class="line">os.system(<span class="string">"cd temp"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> f <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">        dst= cv2.bitwise_xor(lowbit(png[: ,: ,i]),lowbit(png[: ,:, f]))</span><br><span class="line"></span><br><span class="line">        cv2.imwrite(<span class="string">"temp/"</span>+<span class="string">"xor_"</span>+str(i)+<span class="string">"_"</span>+str(f)+<span class="string">".png"</span>,dst*<span class="number">255</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> f <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">        dst= cv2.bitwise_or(lowbit(png[: ,: ,i]),lowbit(png[: ,:, f]))</span><br><span class="line"></span><br><span class="line">        cv2.imwrite(<span class="string">"temp/"</span>+<span class="string">"or_"</span>+str(i)+<span class="string">"_"</span>+str(f)+<span class="string">".png"</span>,dst*<span class="number">255</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> f <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">        dst= cv2.bitwise_and(lowbit(png[: ,: ,i]),lowbit(png[: ,:, f]))</span><br><span class="line"></span><br><span class="line">        cv2.imwrite(<span class="string">"temp/"</span>+<span class="string">"and_"</span>+str(i)+<span class="string">"_"</span>+str(f)+<span class="string">".png"</span>,dst*<span class="number">255</span>)</span><br></pre></td></tr></table></figure>
-<p>然后就可以得到结果，很明显能够看到flag了：</p>
-<p><img src="https://i.loli.net/2018/09/27/5bac576b10d26.png" alt=""></p>
-<p><img src="https://i.loli.net/2018/09/27/5bac576a84317.png" alt=""></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CTF</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/27/几道图片隐写题一/">展开全文 >></a>
         </p>
       
 
@@ -1177,6 +1064,119 @@
 
 
   
+    <article id="post-几道图片隐写题一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/27/几道图片隐写题一/">几道图片隐写题一</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/27/几道图片隐写题一/" class="archive-article-date">
+  	<time datetime="2018-09-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>代码参考：合天智汇 <a href="https://mp.weixin.qq.com/s/kxpmNpk8xAA3mbMtzyWaiw" target="_blank" rel="noopener">几道隐写题目的总结</a></p>
+<p>网鼎杯 第一场MISC</p>
+<p><a href="https://share.weiyun.com/5B1ykSO" target="_blank" rel="noopener">题目下载链接</a></p>
+</blockquote>
+<ul>
+<li>打开压缩包得到的是一张PNG格式的图片</li>
+</ul>
+<p><img src="https://i.loli.net/2018/09/27/5bac57670a4c5.png" alt="1538017412117"></p>
+<ul>
+<li>首先拖放到010Editor中：</li>
+</ul>
+<p><img src="https://i.loli.net/2018/09/27/5bac5767a95c3.png" alt="1538017580794"></p>
+<p>CTRL+F 搜索IHDR发现只有一个，没有其他问题</p>
+<ul>
+<li>然后放到KALI中分析一波：</li>
+</ul>
+<p><img src="https://i.loli.net/2018/09/27/5bac5768bd784.png" alt=""></p>
+<p>图片能够在kali中打开，说明不是宽高的隐写，因为如果修改了宽高在linux中是无法正常显示的</p>
+<ul>
+<li>然后binwalk分析一波：</li>
+</ul>
+<p><img src="https://i.loli.net/2018/09/27/5bac57681f66f.png" alt=""></p>
+<p>同样的没有什么问题</p>
+<ul>
+<li>最后就是放到 stegslove里面试一试了</li>
+</ul>
+<blockquote>
+<p>科普一下png的知识</p>
+</blockquote>
+<p>png支持RGBA四个通道，每个通道占8个二进制位，隐写文件或数据一般都在各个通道的低位，因为低位的变化不会引起较大的视觉变化，图片还是原来的图片，但是你不知道是在哪个通道，这里有4个通道，如果藏在一个通道的低位的话，有四种可能，如果藏在两个通道的低位的话，可能进行各种运算操作后出现新的图片，加减乘除与或异或</p>
+<p><img src="https://i.loli.net/2018/09/27/5bac576932ee5.png" alt=""></p>
+<p>发现Red plane 0是空的，按理来说应该也是”雪花“的，所以应该是有问题的</p>
+<p>然后 Analyse - Data Extract，查看该通道，得知是LSB隐写</p>
+<p><img src="https://i.loli.net/2018/09/27/5bac5769ef894.png" alt=""></p>
+<p>后面得知就是吧Alpha、Red、Green、Blue 0通道进行异或处理就能够得到flag了，可以通过stegslove获得，下面说一下通过python编写脚本进行色道分离异或处理的方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lowbit</span><span class="params">(x)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> x &amp; <span class="number">0x1</span></span><br><span class="line"></span><br><span class="line">png= cv2.imread(<span class="string">"flag_enc.png"</span> , cv2.IMREAD_UNCHANGED)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个temp文件夹保存异或之后的图片</span></span><br><span class="line">os.system(<span class="string">"mkdir temp"</span>)</span><br><span class="line"><span class="comment"># 打开进入temp文件夹</span></span><br><span class="line">os.system(<span class="string">"cd temp"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> f <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">        dst= cv2.bitwise_xor(lowbit(png[: ,: ,i]),lowbit(png[: ,:, f]))</span><br><span class="line"></span><br><span class="line">        cv2.imwrite(<span class="string">"temp/"</span>+<span class="string">"xor_"</span>+str(i)+<span class="string">"_"</span>+str(f)+<span class="string">".png"</span>,dst*<span class="number">255</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> f <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">        dst= cv2.bitwise_or(lowbit(png[: ,: ,i]),lowbit(png[: ,:, f]))</span><br><span class="line"></span><br><span class="line">        cv2.imwrite(<span class="string">"temp/"</span>+<span class="string">"or_"</span>+str(i)+<span class="string">"_"</span>+str(f)+<span class="string">".png"</span>,dst*<span class="number">255</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> f <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">4</span>):</span><br><span class="line"></span><br><span class="line">        dst= cv2.bitwise_and(lowbit(png[: ,: ,i]),lowbit(png[: ,:, f]))</span><br><span class="line"></span><br><span class="line">        cv2.imwrite(<span class="string">"temp/"</span>+<span class="string">"and_"</span>+str(i)+<span class="string">"_"</span>+str(f)+<span class="string">".png"</span>,dst*<span class="number">255</span>)</span><br></pre></td></tr></table></figure>
+<p>然后就可以得到结果，很明显能够看到flag了：</p>
+<p><img src="https://i.loli.net/2018/09/27/5bac576b10d26.png" alt=""></p>
+<p><img src="https://i.loli.net/2018/09/27/5bac576a84317.png" alt=""></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CTF</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/27/几道图片隐写题一/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-《伊萨卡岛》" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1325,7 +1325,7 @@
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: true
+		showTags: false
 	}
 </script>
 
@@ -1358,15 +1358,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">Article</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">true</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">Friens</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">ABOUT ME</a></li>
       
         
     </ul>
@@ -1391,6 +1391,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CTF</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Game</a>
               </li>
              
@@ -1399,19 +1407,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">环境配置</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CTF</a>
               </li>
              
               <li class="article-tag-list-item">
