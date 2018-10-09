@@ -243,50 +243,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>Python代码参考：<a href="https://mp.weixin.qq.com/s/kxpmNpk8xAA3mbMtzyWaiw" target="_blank" rel="noopener">合天智汇-几道图片隐写题</a></p>
-<p>题目来源：Bugku—图穷匕见</p>
-<p><a href="https://share.weiyun.com/50UMgkn" target="_blank" rel="noopener">文件下载</a></p>
-</blockquote>
-<p>下载得到一张图片，一贯的套路，拖到010Editor里面看看先</p>
-<p><img src="https://i.loli.net/2018/09/28/5bae44c308c09.png" alt=""></p>
-<p>真正有东西的是后面的这部分数字和字母：</p>
-<p><img src="https://i.loli.net/2018/09/28/5bae45917728a.png" alt=""></p>
-<blockquote>
-<p>科普一下</p>
-</blockquote>
-<p><img src="https://i.loli.net/2018/09/28/5bae4610acdb4.png" alt=""></p>
-<blockquote>
-<p>Exif : <strong>可交换图像文件格式</strong>（英语：Exchangeable image file format，官方简称<strong>Exif</strong>），是专门为数码相机的照片设定的，可以记录数码照片的属性信息和拍摄数据</p>
-<p>Exif可以附加于JPEG、TIFF、RIFF 等文件之中，为其增加有关数码相机拍摄信息的内容和索引图或图像处理软件的版本信息。</p>
-</blockquote>
-<p>还是binwalk分析一下看看：</p>
-<p><img src="https://i.loli.net/2018/09/28/5bae472653d3f.png" alt=""></p>
-<p>没什么特别，看来flag就在这一串的数字字母结合的数据里头了，很明显看起来这是16进制的编码，转换一下得到下面的文本：</p>
-<blockquote>
-<p>ps：Converter，一个转换工具，功能很齐全</p>
-</blockquote>
-<p><img src="https://i.loli.net/2018/09/28/5bae48752930e.png" alt=""></p>
-<p>得到的是一堆的坐标，能够干嘛呢，后来知道通过坐标画图</p>
-<blockquote>
-<p>方法一：使用KALI 的 gnuplot </p>
-</blockquote>
-<p>百度略微了解了一下gnuplot的用法，把坐标转换成为 gnuplot 能够识别的形式</p>
-<p>用notepad++ 的替换即可完成，保存为1.txt文件，然后在Kali中进入gnuplot</p>
-<p>执行 plot “1.txt”,得到如下图片：</p>
-<p><img src="https://i.loli.net/2018/09/28/5bae4c9870fad.png" alt=""></p>
-<p>扫码即可得到falg:</p>
-<blockquote>
-<p>flag{40fc0a979f759c8892f4dc045e28b820}</p>
-<p>方法二：利用Python编写脚本</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">n=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">canvas= np.ones((<span class="number">300</span>, <span class="number">300</span>, <span class="number">3</span>), dtype=<span class="string">"uint8"</span>)</span><br><span class="line"></span><br><span class="line">canvas=canvas*<span class="number">255</span></span><br><span class="line"></span><br><span class="line">list=open(<span class="string">"1.txt"</span>).read().split(<span class="string">"\n"</span>)</span><br><span class="line"></span><br><span class="line">list=[i.split(<span class="string">","</span>)<span class="keyword">for</span> i <span class="keyword">in</span> list]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> list:</span><br><span class="line"></span><br><span class="line">	canvas[int(p[<span class="number">0</span>]),int(p[<span class="number">1</span>])]=[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">	cv2.imwrite(<span class="string">"2.jpg"</span>,canvas)</span><br><span class="line"></span><br><span class="line">cv2.imshow(<span class="string">"Canvas"</span>,canvas)</span><br><span class="line"></span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/09/29/5bae518f03e02.png" alt=""></p>
-<p>扫码得到flag:</p>
-<blockquote>
-<p>flag{40fc0a979f759c8892f4dc045e28b820}</p>
-</blockquote>
-
+        <p><img src="https://i.loli.net/2018/10/09/5bbc11323ea9e.jpg" alt=""></p>
+        
+          <a class="article-more-a" href="/2018/09/28/几道图片隐写题三/#more">More >></a>
+        
       
 
       
@@ -339,19 +299,19 @@
 
 
   
-    <article id="post-几道图片隐写题二" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Linux-文件解析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/27/几道图片隐写题二/">几道图片隐写题二</a>
+      <a class="article-title" href="/2018/09/27/Linux-文件解析/">Linux--文件解析</a>
     </h1>
   
 
         
-        <a href="/2018/09/27/几道图片隐写题二/" class="archive-article-date">
+        <a href="/2018/09/27/Linux-文件解析/" class="archive-article-date">
   	<time datetime="2018-09-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-27</time>
 </a>
         
@@ -359,9 +319,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://i.loli.net/2018/10/09/5bbc0f902872e.jpg" alt=""></p>
+        <p><img src="https://i.loli.net/2018/10/09/5bbc0da62a51e.png" alt=""></p>
         
-          <a class="article-more-a" href="/2018/09/27/几道图片隐写题二/#more">More >></a>
+          <a class="article-more-a" href="/2018/09/27/Linux-文件解析/#more">More >></a>
         
       
 
@@ -375,7 +335,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CTF</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
@@ -385,7 +345,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/27/几道图片隐写题二/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/09/27/Linux-文件解析/">展开全文 >></a>
         </p>
       
 
@@ -499,19 +459,19 @@
 
 
   
-    <article id="post-Linux-文件解析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-几道图片隐写题二" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/27/Linux-文件解析/">Linux--文件解析</a>
+      <a class="article-title" href="/2018/09/27/几道图片隐写题二/">几道图片隐写题二</a>
     </h1>
   
 
         
-        <a href="/2018/09/27/Linux-文件解析/" class="archive-article-date">
+        <a href="/2018/09/27/几道图片隐写题二/" class="archive-article-date">
   	<time datetime="2018-09-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-27</time>
 </a>
         
@@ -519,9 +479,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://i.loli.net/2018/10/09/5bbc0da62a51e.png" alt=""></p>
+        <p><img src="https://i.loli.net/2018/10/09/5bbc0f902872e.jpg" alt=""></p>
         
-          <a class="article-more-a" href="/2018/09/27/Linux-文件解析/#more">More >></a>
+          <a class="article-more-a" href="/2018/09/27/几道图片隐写题二/#more">More >></a>
         
       
 
@@ -535,7 +495,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CTF</a>
         		</li>
       		
 		</ul>
@@ -545,7 +505,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/27/Linux-文件解析/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/09/27/几道图片隐写题二/">展开全文 >></a>
         </p>
       
 
@@ -769,11 +729,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CTF</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color5">Game</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -781,7 +737,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Game</a>
+                <a href="javascript:void(0)" class="js-tag color4">CTF</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -793,11 +753,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
+                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
             
             <div class="clearfix"></div>
