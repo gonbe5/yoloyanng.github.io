@@ -6,19 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://yoloyanng.github.io">
-  <title>Ithaca&#39;s Tavern</title>
+  <title>Bugku-RE-writeup | Ithaca&#39;s Tavern</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="日语50音          /*main*/              html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockqu">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ithaca&#39;s Tavern">
-<meta property="og:url" content="https://yoloyanng.github.io/assets/demo/border1px.html">
+  <meta name="keywords" content="ctf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bugku-RE-writeup">
+<meta property="og:url" content="https://yoloyanng.github.io/2018/10/09/Bugku-RE-writeup/index.html">
 <meta property="og:site_name" content="Ithaca&#39;s Tavern">
-<meta property="og:description" content="日语50音          /*main*/              html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockqu">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-07-28T18:51:08.000Z">
+<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbc1b4048f82.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbc1cd022ca1.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbc1f42c1223.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbc1fce41c4d.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbc21467d804.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbc227734e32.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbcbdb82dcfa.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbcbe007e4fd.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbcc3370ceb9.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbcc89ace250.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/09/5bbcc3995e8ce.png">
+<meta property="og:updated_time" content="2018-10-09T15:53:08.862Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ithaca&#39;s Tavern">
-<meta name="twitter:description" content="日语50音          /*main*/              html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockqu">
+<meta name="twitter:title" content="Bugku-RE-writeup">
+<meta name="twitter:image" content="https://i.loli.net/2018/10/09/5bbc1b4048f82.jpg">
+  
+    <link rel="alternative" href="true" title="Ithaca&#39;s Tavern" type="application/atom+xml">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -51,13 +63,15 @@
 		  <h1 class="header-author"><a href="/">Ithaca</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">不成问题的问题</p>
+		<p class="header-subtitle">开心点！人间不值得</p>
 		
 
 		<nav class="header-menu">
 			<ul>
 			
 				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/photos">相册</a></li>
 	        
 			</ul>
 		</nav>
@@ -81,9 +95,9 @@
 				
 					<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yanng-82/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
-					<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yanng-82/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 			</div>
 		</nav>
@@ -107,9 +121,11 @@
 			  <h1 class="header-author js-header-author">Ithaca</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>不成问题的问题<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>开心点！人间不值得<i class="icon icon-quo-right"></i></p>
 			
 			
+			
+				
 			
 				
 			
@@ -120,9 +136,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/yoloyanng" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yanng-82/activities" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
-						<a class="qq" target="_blank" href="/assets/img/qq.jpg" title="qq"><i class="icon-qq"></i></a>
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yanng-82/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 				</div>
 			</nav>
@@ -131,7 +147,9 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 100%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/photos">相册</a></li>
 		        
 				</ul>
 			</nav>
@@ -146,7 +164,228 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            [object Promise]
+            <article id="post-Bugku-RE-writeup" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Bugku-RE-writeup
+    </h1>
+  
+
+        
+        <a href="/2018/10/09/Bugku-RE-writeup/" class="archive-article-date">
+  	<time datetime="2018-10-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://i.loli.net/2018/10/09/5bbc1b4048f82.jpg" alt=""></p>
+<a id="more"></a>
+<blockquote>
+<p>对于bugku平台上面的逆向题目的解题与思考过程，希望能够有所收获</p>
+</blockquote>
+<h3 id="Easy-vb"><a href="#Easy-vb" class="headerlink" title="Easy_vb"></a>Easy_vb</h3><p>在IDA中打开就能够看到flag了，算不上是逆向题了</p>
+<p><img src="https://i.loli.net/2018/10/09/5bbc1cd022ca1.png" alt=""></p>
+<hr>
+<h3 id="Easy-Re"><a href="#Easy-Re" class="headerlink" title="Easy_Re"></a>Easy_Re</h3><p>010Editor中打开，ctrl+F搜索一波：</p>
+<p><img src="https://i.loli.net/2018/10/09/5bbc1f42c1223.png" alt=""></p>
+<p>或者OD中打开，右键  中文搜索引擎-&gt;ASCII</p>
+<p><img src="https://i.loli.net/2018/10/09/5bbc1fce41c4d.png" alt=""></p>
+<hr>
+<h3 id="游戏过关"><a href="#游戏过关" class="headerlink" title="游戏过关"></a>游戏过关</h3><p>看大佬writeup才知道1-8依次输入，flag就出来了</p>
+<p><img src="https://i.loli.net/2018/10/09/5bbc21467d804.png" alt=""></p>
+<p>无壳，载入OD中看看，ASCII找一波，然后定位到下面：</p>
+<p><img src="https://i.loli.net/2018/10/09/5bbc227734e32.png" alt=""></p>
+<p>push ebp  就是程序的开头了</p>
+<hr>
+<h3 id="Timer-阿里CTF"><a href="#Timer-阿里CTF" class="headerlink" title="Timer(阿里CTF)"></a>Timer(阿里CTF)</h3><hr>
+<h3 id="逆向入门"><a href="#逆向入门" class="headerlink" title="逆向入门"></a>逆向入门</h3><p>也算不上是逆i向了</p>
+<p>先是用IDA打开，Shitf+F12什么也没有，然后用notepad++看看</p>
+<p><img src="https://i.loli.net/2018/10/09/5bbcbdb82dcfa.png" alt=""></p>
+<p>发现base64转图片，转换得到一个二维码：</p>
+<p><img src="https://i.loli.net/2018/10/09/5bbcbe007e4fd.png" alt=""></p>
+<p>扫码得到flag:</p>
+<p>bugku{inde_9882ihsd8-0}</p>
+<hr>
+<h3 id="love"><a href="#love" class="headerlink" title="love"></a>love</h3><p>IDA中打开，Shitf+F12</p>
+<p><img src="https://i.loli.net/2018/10/09/5bbcc3370ceb9.png" alt=""></p>
+<p>接着F5得到伪代码：</p>
+<p><img src="https://i.loli.net/2018/10/09/5bbcc89ace250.png" alt=""></p>
+<ul>
+<li>第一次加密从前面的字符串中也能够得出是base64加密</li>
+<li>第二次就是ASCII值加一下了</li>
+<li>最后与Str2进行比较，如果一样就输出right flag!</li>
+</ul>
+<p>那么只要你过来将Str2你过来操作就可以了</p>
+<p><img src="https://i.loli.net/2018/10/09/5bbcc3995e8ce.png" alt=""></p>
+<p>于是用python脚本跑起来：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="LoopAndLoop-阿里CTF"><a href="#LoopAndLoop-阿里CTF" class="headerlink" title="LoopAndLoop(阿里CTF)"></a>LoopAndLoop(阿里CTF)</h3><hr>
+<h3 id="easy-100-LCTF"><a href="#easy-100-LCTF" class="headerlink" title="easy-100(LCTF)"></a>easy-100(LCTF)</h3><hr>
+<h3 id="SafeBox-NJCTF"><a href="#SafeBox-NJCTF" class="headerlink" title="SafeBox(NJCTF)"></a>SafeBox(NJCTF)</h3><hr>
+<h3 id="Mountain-climbing"><a href="#Mountain-climbing" class="headerlink" title="Mountain climbing"></a>Mountain climbing</h3><hr>
+<h3 id="Take-the-maze"><a href="#Take-the-maze" class="headerlink" title="Take the maze"></a>Take the maze</h3><hr>
+<h3 id="easyeasy-200-LCTF"><a href="#easyeasy-200-LCTF" class="headerlink" title="easyeasy-200(LCTF)"></a>easyeasy-200(LCTF)</h3><hr>
+<h3 id="easycrack-100-NJCTF"><a href="#easycrack-100-NJCTF" class="headerlink" title="easycrack-100(NJCTF)"></a>easycrack-100(NJCTF)</h3><hr>
+<h3 id="LittleRotatorGame-NJCTF"><a href="#LittleRotatorGame-NJCTF" class="headerlink" title="LittleRotatorGame(NJCTF)"></a>LittleRotatorGame(NJCTF)</h3><p>待更新……</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>你有所收获才有价值<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ctf</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yoloyanng.github.io/2018/10/09/Bugku-RE-writeup/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/10/08/数模学习—-day1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数模学习—-day1</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+
           </div>
         </div>
       </div>
@@ -167,7 +406,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
@@ -258,11 +497,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Game</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color4">ctf</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -270,11 +505,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color1">Tools</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Tools</a>
+                <a href="javascript:void(0)" class="js-tag color5">Game</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -282,11 +517,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
               </li>
             
             <div class="clearfix"></div>
@@ -361,7 +604,7 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">现就读与NCU&lt;br&gt;&lt;br&gt;不喜与人接触&lt;br&gt;&lt;br&gt;习惯独处</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">现就读于NCU&lt;br&gt;&lt;br&gt;不喜与人接触&lt;br&gt;&lt;br&gt;习惯独处</div>
   	  	
     	</section>
     
