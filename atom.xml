@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yoloyanng.github.io/"/>
-  <updated>2018-10-09T15:53:08.862Z</updated>
+  <updated>2018-10-10T08:45:03.535Z</updated>
   <id>https://yoloyanng.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ACM_day1</title>
+    <link href="https://yoloyanng.github.io/2018/10/10/ACM-day1/"/>
+    <id>https://yoloyanng.github.io/2018/10/10/ACM-day1/</id>
+    <published>2018-10-10T07:58:26.000Z</published>
+    <updated>2018-10-10T08:45:03.535Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2018/10/10/5bbdb17b39a0a.jpg" width="50%" height="50%"></p><p>现在已经是大二了，也已经十月份了，才开始接触ACM，实在是。。。。也还是可以的，只是希望说能够借此提升编程水平。找了本书《挑战程序设计竞赛》，找了个平台——Leetcode，加上还有这么台电脑，既既然如此，那就就开始吧！</p><a id="more"></a><p><img src="https://i.loli.net/2018/10/10/5bbdb33f1e9a5.png" alt=""></p><blockquote><p>样例1：</p><p>输入：</p><p>n = 3</p><p>m = 10</p><p>k = {1, 3 , 5}</p><p>输出：</p><p>Yes（例如4次抽取的结果是1、1、3、5，和就是10）</p><hr><p>样例2：</p><p>输入：</p><p>n = 3</p><p>m =9 </p><p>k = {1 , 3 , 5}</p><p>输出：</p><p>No（不存在和为9的抽取方案）</p></blockquote><ul><li>My Coding</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/10/10/5bbdb17b39a0a.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;&gt;&lt;/p&gt;
+&lt;p&gt;现在已经是大二了，也已经十月份了，才开始接触ACM，实在是。。。。也还是可以的，只是希望说能够借此提升编程水平。找了本书《挑战程序设计竞赛》，找了个平台——Leetcode，加上还有这么台电脑，既既然如此，那就就开始吧！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="ACM" scheme="https://yoloyanng.github.io/tags/ACM/"/>
+    
+  </entry>
   
   <entry>
     <title>Bugku-RE-writeup</title>
@@ -289,6 +310,26 @@
   </entry>
   
   <entry>
+    <title>几道图片隐写题二</title>
+    <link href="https://yoloyanng.github.io/2018/09/27/%E5%87%A0%E9%81%93%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99%E9%A2%98%E4%BA%8C/"/>
+    <id>https://yoloyanng.github.io/2018/09/27/几道图片隐写题二/</id>
+    <published>2018-09-26T16:00:00.000Z</published>
+    <updated>2018-10-09T02:17:23.239Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2018/10/09/5bbc0f902872e.jpg" alt=""></p><a id="more"></a><blockquote><p>网鼎杯第一场MISC—-clip</p><p><a href="https://share.weiyun.com/54SMoop" target="_blank" rel="noopener">题目下载链接</a></p></blockquote><p>下载题目压缩包解压后得到两个文件 desc.txt  和  damaged.disk</p><p>desc.txt理面是一段英文，翻译后就是：</p><blockquote><p>Horse Clip-Clop<br>A strange filesystem is recovered from a damaged old hard disk.</p><p>马夹子<br>从损坏的旧硬盘恢复奇怪的文件系统。</p></blockquote><p>然后百度、Google还是看不懂，就不对这个txt文件分析了</p><hr><ul><li>把 damaged.disk拖到010Editor中看看有什么信息</li></ul><p><img src="https://i.loli.net/2018/09/27/5bac97e575fa8.png" alt=""></p><p>文件开头，看不懂。。。。。。</p><p>往下继续翻，CTRL+F 搜索一下 flag，key，ctf 无果（太天真了）</p><p>后面发现了PNG的文件头，终于找到关键信息</p><p><img src="https://i.loli.net/2018/09/27/5bac98f96ed4c.png" alt=""></p><p>往下找发现有两个IHDR，CTRL +F 发现确实就是两个然后裁剪出来补上文件头得到两张图片</p><p><img src="https://i.loli.net/2018/09/27/5bac9af42b0b3.png" alt=""></p><p><img src="https://i.loli.net/2018/09/27/5bac9b07db662.png" alt=""></p><p>然后用PS将两张图片进行拼接，就得到flag了</p><p><img src="https://i.loli.net/2018/09/28/5badb2677bd56.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/10/09/5bbc0f902872e.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="CTF" scheme="https://yoloyanng.github.io/tags/CTF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux--文件解析</title>
     <link href="https://yoloyanng.github.io/2018/09/27/Linux-%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/"/>
     <id>https://yoloyanng.github.io/2018/09/27/Linux-文件解析/</id>
@@ -328,26 +369,6 @@
 &lt;li&gt;打开压缩包得到的是一张PNG格式的图片&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/09/27/5bac57670a4c5.png&quot; alt=&quot;1538017412117&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="CTF" scheme="https://yoloyanng.github.io/tags/CTF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>几道图片隐写题二</title>
-    <link href="https://yoloyanng.github.io/2018/09/27/%E5%87%A0%E9%81%93%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99%E9%A2%98%E4%BA%8C/"/>
-    <id>https://yoloyanng.github.io/2018/09/27/几道图片隐写题二/</id>
-    <published>2018-09-26T16:00:00.000Z</published>
-    <updated>2018-10-09T02:17:23.239Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://i.loli.net/2018/10/09/5bbc0f902872e.jpg" alt=""></p><a id="more"></a><blockquote><p>网鼎杯第一场MISC—-clip</p><p><a href="https://share.weiyun.com/54SMoop" target="_blank" rel="noopener">题目下载链接</a></p></blockquote><p>下载题目压缩包解压后得到两个文件 desc.txt  和  damaged.disk</p><p>desc.txt理面是一段英文，翻译后就是：</p><blockquote><p>Horse Clip-Clop<br>A strange filesystem is recovered from a damaged old hard disk.</p><p>马夹子<br>从损坏的旧硬盘恢复奇怪的文件系统。</p></blockquote><p>然后百度、Google还是看不懂，就不对这个txt文件分析了</p><hr><ul><li>把 damaged.disk拖到010Editor中看看有什么信息</li></ul><p><img src="https://i.loli.net/2018/09/27/5bac97e575fa8.png" alt=""></p><p>文件开头，看不懂。。。。。。</p><p>往下继续翻，CTRL+F 搜索一下 flag，key，ctf 无果（太天真了）</p><p>后面发现了PNG的文件头，终于找到关键信息</p><p><img src="https://i.loli.net/2018/09/27/5bac98f96ed4c.png" alt=""></p><p>往下找发现有两个IHDR，CTRL +F 发现确实就是两个然后裁剪出来补上文件头得到两张图片</p><p><img src="https://i.loli.net/2018/09/27/5bac9af42b0b3.png" alt=""></p><p><img src="https://i.loli.net/2018/09/27/5bac9b07db662.png" alt=""></p><p>然后用PS将两张图片进行拼接，就得到flag了</p><p><img src="https://i.loli.net/2018/09/28/5badb2677bd56.png" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2018/10/09/5bbc0f902872e.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
